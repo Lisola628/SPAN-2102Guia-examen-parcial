@@ -17,21 +17,21 @@
   --sw:256px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;line-height:1.75;color:var(--ink);background:var(--bone)}
+body{font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.85;color:var(--ink);background:var(--bone)}
 
 /* SIDEBAR */
 .sidebar{position:fixed;inset:0 auto 0 0;width:var(--sw);background:var(--cr-dk);display:flex;flex-direction:column;overflow-y:auto;z-index:200}
 .sb-brand{padding:26px 20px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
-.sb-brand .kicker{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
-.sb-brand .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;line-height:1.25}
-.sb-brand .sub{font-size:12px;font-style:italic;color:rgba(255,255,255,.38);margin-top:5px}
-.nav-group{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);padding:16px 20px 4px}
+.sb-brand .kicker{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.sb-brand .name{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#fff;line-height:1.25}
+.sb-brand .sub{font-size:13px;font-style:italic;color:rgba(255,255,255,.65);margin-top:5px}
+.nav-group{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);padding:16px 20px 4px}
 .nav-list{list-style:none}
-.nav-list a{display:flex;align-items:center;gap:10px;padding:8px 20px;font-size:13px;color:rgba(255,255,255,.62);text-decoration:none;border-left:3px solid transparent;transition:all .15s}
-.nav-list a .num{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.28);min-width:22px}
+.nav-list a{display:flex;align-items:center;gap:10px;padding:10px 20px;font-size:14px;color:rgba(255,255,255,.82);text-decoration:none;border-left:3px solid transparent;transition:all .15s}
+.nav-list a .num{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.55);min-width:22px}
 .nav-list a:hover{color:#fff;background:rgba(255,255,255,.07)}
 .nav-list a.active{color:#fff;background:rgba(255,255,255,.1);border-left-color:#F5C842}
-.sb-footer{margin-top:auto;padding:14px 20px;border-top:1px solid rgba(255,255,255,.08);font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.22)}
+.sb-footer{margin-top:auto;padding:14px 20px;border-top:1px solid rgba(255,255,255,.08);font-family:'JetBrains Mono',monospace;font-size:12px;color:rgba(255,255,255,.55)}
 
 /* MAIN */
 .main{margin-left:var(--sw)}
@@ -39,15 +39,15 @@ body{font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;line-height:1.7
 /* HERO */
 .hero{background:var(--cr-dk);background-image:radial-gradient(ellipse 60% 90% at 92% 8%,rgba(245,200,66,.15) 0%,transparent 55%),radial-gradient(ellipse 50% 60% at 5% 90%,rgba(74,25,66,.35) 0%,transparent 55%);padding:60px 52px 52px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;border:1px solid rgba(255,255,255,.05);pointer-events:none}
-.hero-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#F5C842;margin-bottom:14px}
+.hero-kicker{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#F5C842;margin-bottom:14px}
 .hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:10px}
-.hero-sub{font-size:16px;font-style:italic;color:rgba(255,255,255,.55);margin-bottom:30px}
+.hero-sub{font-size:18px;font-style:italic;color:rgba(255,255,255,.75);margin-bottom:30px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.72);background:rgba(255,255,255,.07);letter-spacing:.04em}
+.chip{font-family:'JetBrains Mono',monospace;font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.72);background:rgba(255,255,255,.07);letter-spacing:.04em}
 .chip.gold{background:rgba(245,200,66,.14);border-color:rgba(245,200,66,.4);color:#F5C842}
 
 /* ALERT */
-.alert-bar{background:var(--gd-lt);border-left:4px solid var(--gd);padding:14px 52px;font-size:14px;color:var(--sl);display:flex;gap:12px;align-items:flex-start}
+.alert-bar{background:var(--gd-lt);border-left:4px solid var(--gd);padding:16px 52px;font-size:16px;color:var(--sl);display:flex;gap:12px;align-items:flex-start}
 .alert-bar strong{color:var(--gd)}
 
 /* CONTENT */
@@ -60,68 +60,68 @@ body{font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;line-height:1.7
 .card-head{padding:18px 26px;display:flex;align-items:center;gap:16px}
 .card-head.cr{background:var(--cr)}.card-head.pl{background:var(--pl)}.card-head.tl{background:var(--tl)}.card-head.sl{background:var(--sl)}.card-head.dk{background:var(--tl-dk)}
 .card-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;font-style:italic;color:rgba(255,255,255,.18);line-height:1;min-width:38px}
-.card-title .lbl{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:2px}
-.card-title h2{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.2}
-.card-chap{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 9px;border-radius:12px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);margin-left:auto;white-space:nowrap}
+.card-title .lbl{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:2px}
+.card-title h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;line-height:1.2}
+.card-chap{font-family:'JetBrains Mono',monospace;font-size:12px;padding:5px 11px;border-radius:12px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);margin-left:auto;white-space:nowrap}
 .card-body{padding:26px 26px 30px}
 
 /* SUBSECTIONS */
 .sub{margin-bottom:26px}.sub:last-child{margin-bottom:0}
-.sub-title{font-family:'Playfair Display',serif;font-size:14.5px;font-weight:700;font-style:italic;margin-bottom:13px;padding-bottom:6px;border-bottom:1px solid;display:flex;align-items:center;gap:8px}
+.sub-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;font-style:italic;margin-bottom:13px;padding-bottom:6px;border-bottom:1px solid;display:flex;align-items:center;gap:8px}
 .sub-title.cr{color:var(--cr);border-color:var(--cr-lt)}.sub-title.pl{color:var(--pl);border-color:var(--pl-lt)}.sub-title.tl{color:var(--tl);border-color:var(--tl-lt)}.sub-title.gd{color:var(--gd);border-color:var(--gd-lt)}
 
 /* VOCAB TABLE */
-.vt{width:100%;border-collapse:collapse;font-size:14px}
-.vt th{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:9px 13px;text-align:left}
-.vt td{padding:8px 13px;border-bottom:1px solid #F0ECE6;vertical-align:top;line-height:1.5}
+.vt{width:100%;border-collapse:collapse;font-size:15.5px}
+.vt th{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:11px 15px;text-align:left}
+.vt td{padding:11px 15px;border-bottom:1px solid #F0ECE6;vertical-align:top;line-height:1.7}
 .vt tr:last-child td{border-bottom:none}.vt tr:hover td{background:var(--smoke)}
 .vt td:first-child{font-weight:600}.vt td:last-child{color:var(--mid);font-style:italic}
-.vt td .note{font-size:11.5px;font-style:normal;font-weight:600;margin-top:2px}
+.vt td .note{font-size:13px;font-style:normal;font-weight:600;margin-top:2px}
 .vt td .note.cr{color:var(--cr)}.vt td .note.tl{color:var(--tl)}
 tr.alt td{background:var(--smoke)}
 .vt.cr th{background:var(--cr);color:#fff}.vt.pl th{background:var(--pl);color:#fff}
 .vt.tl th{background:var(--tl);color:#fff}.vt.gd th{background:var(--gd);color:#fff}.vt.sl th{background:var(--sl);color:#fff}
 
 /* INFO BOX */
-.box{border-radius:8px;padding:15px 19px;margin:14px 0;font-size:14px;line-height:1.7;border:1px solid transparent}
+.box{border-radius:8px;padding:18px 22px;margin:14px 0;font-size:16px;line-height:1.85;border:1px solid transparent}
 .box.tl{background:var(--tl-lt);border-color:rgba(13,92,107,.2)}.box.gd{background:var(--gd-lt);border-color:rgba(154,110,0,.22)}
 .box.pl{background:var(--pl-lt);border-color:rgba(74,25,66,.18)}.box.cr{background:var(--cr-lt);border-color:rgba(139,26,26,.18)}
 .box p{margin-bottom:6px}.box p:last-child{margin-bottom:0}
 .box strong{color:var(--tl-dk)}.box.gd strong{color:var(--gd)}.box.cr strong{color:var(--cr)}.box.pl strong{color:var(--pl)}
-.box .ex{font-style:italic;color:var(--sl);display:block;margin:3px 0 3px 16px}
-.box .why{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--tl);display:block;margin-top:2px}
+.box .ex{font-style:italic;color:var(--sl);display:block;margin:5px 0 5px 18px;font-size:15.5px}
+.box .why{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--tl);display:block;margin-top:2px}
 
 /* RULE BOX */
 .rule-box{background:var(--smoke);border-radius:8px;padding:18px 22px;margin:14px 0;border:1px solid var(--rule)}
 .ri{display:flex;gap:13px;margin-bottom:15px;align-items:flex-start}.ri:last-child{margin-bottom:0}
-.badge{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:3px;flex-shrink:0}
+.badge{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:3px;flex-shrink:0}
 .b-ind{background:var(--tl-lt);color:var(--tl-dk);border:1px solid rgba(13,92,107,.28)}
 .b-sub{background:var(--pl-lt);color:var(--pl);border:1px solid rgba(74,25,66,.28)}
-.ri-body{font-size:14px;line-height:1.7}
-.ri-body .ex{font-style:italic;color:var(--sl);display:block;margin:3px 0 3px 0}
-.ri-body .why{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--tl);display:inline-block;margin-left:8px}
+.ri-body{font-size:16px;line-height:1.85}
+.ri-body .ex{font-style:italic;color:var(--sl);display:block;margin:6px 0 6px 0;font-size:15.5px}
+.ri-body .why{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--tl);display:inline-block;margin-left:8px}
 
 /* PARTICIPLE CARDS */
 .pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin:13px 0}
 .pc{border-radius:8px;border:1px solid var(--rule);overflow:hidden;text-align:center}
-.pc .inf{background:var(--cr);color:rgba(255,255,255,.82);font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:6px 8px}
-.pc .part{background:#fff;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--cr-dk);padding:9px 8px}
+.pc .inf{background:var(--cr);color:rgba(255,255,255,.92);font-family:'JetBrains Mono',monospace;font-size:13px;padding:8px 8px}
+.pc .part{background:#fff;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--cr-dk);padding:9px 8px}
 
 /* HABER GRID */
-.haber-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:8px;overflow:hidden;border:1px solid var(--rule);font-size:13.5px;margin:12px 0}
+.haber-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:8px;overflow:hidden;border:1px solid var(--rule);font-size:15px;margin:12px 0}
 .hc{padding:9px 14px;background:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .hc:nth-child(4n+3),.hc:nth-child(4n+4){background:var(--smoke)}
-.hc .subj{color:var(--mid);font-size:13px;min-width:90px}
+.hc .subj{color:var(--mid);font-size:15px;min-width:100px}
 .hc .form{font-weight:600;color:var(--cr);font-family:'JetBrains Mono',monospace}
 
 /* DISHES TABLE */
 .dishes-wrap{margin:14px 0}
-.dishes-label{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cr);margin-bottom:10px;padding-bottom:6px;border-bottom:1px dashed var(--cr-lt)}
+.dishes-label{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cr);margin-bottom:10px;padding-bottom:6px;border-bottom:1px dashed var(--cr-lt)}
 .dishes-grid{display:grid;grid-template-columns:repeat(6,1fr);border-radius:10px;overflow:hidden;border:2px solid var(--cr)}
 .dish-col{display:flex;flex-direction:column}
-.dish-letter{background:var(--cr);color:#fff;font-family:'Playfair Display',serif;font-size:24px;font-weight:900;text-align:center;padding:10px 4px 4px;line-height:1}
-.dish-verb{background:rgba(139,26,26,.09);color:var(--cr-dk);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;text-align:center;padding:4px 2px 8px;border-bottom:1px solid var(--cr-lt)}
-.dish-form{font-family:'JetBrains Mono',monospace;font-size:11.5px;text-align:center;padding:5px 4px;border-bottom:1px solid var(--rule);color:var(--sl)}
+.dish-letter{background:var(--cr);color:#fff;font-family:'Playfair Display',serif;font-size:26px;font-weight:900;text-align:center;padding:10px 4px 4px;line-height:1}
+.dish-verb{background:rgba(139,26,26,.09);color:var(--cr-dk);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;text-align:center;padding:4px 2px 8px;border-bottom:1px solid var(--cr-lt)}
+.dish-form{font-family:'JetBrains Mono',monospace;font-size:13px;text-align:center;padding:7px 4px;border-bottom:1px solid var(--rule);color:var(--sl)}
 .dish-form:last-child{border-bottom:none}
 .dish-col:nth-child(odd) .dish-form{background:var(--smoke)}
 .dish-col:nth-child(even) .dish-form{background:#fff}
@@ -129,27 +129,40 @@ tr.alt td{background:var(--smoke)}
 /* TRIGGER PILLS */
 .trigger-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:9px;margin:13px 0}
 .tpill{background:var(--pl-lt);border:1px solid rgba(74,25,66,.16);border-radius:8px;padding:9px 13px}
-.tpill .term{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--pl);font-size:12.5px;display:block;margin-bottom:3px}
-.tpill .ex{color:var(--mid);font-style:italic;font-size:13px}
+.tpill .term{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--pl);font-size:14px;display:block;margin-bottom:4px}
+.tpill .ex{color:var(--mid);font-style:italic;font-size:14.5px}
 
 /* CONTRAST TABLE */
-.ct{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
-.ct th{padding:11px 15px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.ct{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}
+.ct th{padding:13px 15px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:center}
 .ct th.pret{background:var(--sl);color:#fff}.ct th.perf{background:var(--cr);color:#fff}
-.ct td{padding:9px 15px;border-bottom:1px solid var(--rule);text-align:center;font-style:italic;color:var(--mid)}
-.ct td.lbl{font-style:normal;color:var(--ink);font-weight:600;font-size:13px}
+.ct td{padding:11px 15px;border-bottom:1px solid var(--rule);text-align:center;font-style:italic;color:var(--mid)}
+.ct td.lbl{font-style:normal;color:var(--ink);font-weight:600;font-size:15px}
 .ct tr:last-child td{border-bottom:none}.ct tr:nth-child(even) td{background:var(--smoke)}
 
 /* TIPS */
-.tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.tip{background:var(--smoke);border-radius:8px;padding:15px 17px;border:1px solid var(--rule);font-size:13.5px;line-height:1.65}
-.tip-icon{font-size:19px;display:block;margin-bottom:7px}
-.tip-head{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cr);margin-bottom:5px}
+.tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tip{background:var(--smoke);border-radius:8px;padding:18px 20px;border:1px solid var(--rule);font-size:15.5px;line-height:1.75}
+.tip-icon{font-size:22px;display:block;margin-bottom:8px}
+.tip-head{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cr);margin-bottom:5px}
 .tip p{color:var(--mid)}.tip strong{color:var(--ink)}
 
 /* PLACEHOLDER */
 .placeholder{background:var(--gd-lt);border:2px dashed rgba(154,110,0,.35);border-radius:8px;padding:24px;text-align:center;color:var(--gd);font-family:'JetBrains Mono',monospace;font-size:13px;margin-top:18px}
 .placeholder .icon{font-size:26px;margin-bottom:10px;display:block}
+
+
+/* ── ACCESSIBILITY ENHANCEMENTS ── */
+:focus-visible{outline:3px solid #F5C842;outline-offset:3px;border-radius:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.vt td, .box, .ri-body, .tip p{letter-spacing:.01em}
+/* Ensure minimum touch targets */
+.nav-list a{min-height:44px}
+.back-top{min-width:48px;min-height:48px}
+/* Improve table readability */
+.vt tr:hover td{background:#EDF7F9;outline:1px solid rgba(13,92,107,.15)}
+/* Better focus on interactive elements */
+a:focus{text-decoration:underline}
 
 /* BACK TOP */
 .back-top{position:fixed;bottom:26px;right:26px;width:42px;height:42px;background:var(--cr);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:17px;box-shadow:0 4px 14px rgba(139,26,26,.35);transition:transform .2s,background .2s;z-index:300}
@@ -166,6 +179,76 @@ tr.alt td{background:var(--smoke)}
   .sidebar,.back-top{display:none}.main{margin-left:0}
   .card{box-shadow:none;break-inside:avoid}
 }
+
+/* ── A11Y TOOLBAR ── */
+.a11y-bar{position:fixed;top:0;left:var(--sw);right:0;background:rgba(92,14,14,.96);backdrop-filter:blur(6px);padding:7px 52px;display:flex;align-items:center;gap:8px;z-index:150;border-bottom:1px solid rgba(255,255,255,.1)}
+.a11y-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase;margin-right:4px}
+.a11y-btn{font-family:'Playfair Display',serif;font-weight:700;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:4px 12px;cursor:pointer;font-size:13px;transition:background .15s;min-height:32px}
+.a11y-btn:hover,.a11y-btn.active{background:rgba(245,200,66,.25);border-color:#F5C842;color:#F5C842}
+.a11y-divider{width:1px;height:20px;background:rgba(255,255,255,.15);margin:0 4px}
+.main{padding-top:44px}
+/* SIZE OVERRIDES */
+body.size-large{font-size:19px}
+body.size-large .vt{font-size:17.5px}
+body.size-large .box{font-size:18px}
+body.size-large .ri-body{font-size:18px}
+body.size-large .ct{font-size:17px}
+body.size-large .tip{font-size:17.5px}
+body.size-large .dishes-grid{font-size:14px}
+body.size-xlarge{font-size:22px}
+body.size-xlarge .vt{font-size:20px}
+body.size-xlarge .box{font-size:21px}
+body.size-xlarge .ri-body{font-size:21px}
+body.size-xlarge .ct{font-size:19px}
+body.size-xlarge .tip{font-size:20px}
+body.size-xlarge .card-title h2{font-size:26px}
+body.size-xlarge .dishes-grid{font-size:15px}
+/* HIGH CONTRAST MODE */
+body.high-contrast{background:#000;color:#fff}
+body.high-contrast .card{background:#111;border-color:#555}
+body.high-contrast .card-body{background:#111}
+body.high-contrast .vt td{border-color:#444;color:#f0f0f0}
+body.high-contrast .vt td:first-child{color:#fff}
+body.high-contrast .vt td:last-child{color:#ccc}
+body.high-contrast tr.alt td{background:#1a1a1a}
+body.high-contrast .vt tr:hover td{background:#222;outline-color:#666}
+body.high-contrast .box.tl{background:#001820;border-color:#0a9cb5}
+body.high-contrast .box.gd{background:#1a1200;border-color:#d4a017}
+body.high-contrast .box.pl{background:#1a0a1a;border-color:#8a4a8a}
+body.high-contrast .box.cr{background:#1a0000;border-color:#cc3333}
+body.high-contrast .box strong{color:#7fd8e8}
+body.high-contrast .box.gd strong{color:#f0c040}
+body.high-contrast .box.cr strong{color:#ff8888}
+body.high-contrast .box.pl strong{color:#cc88cc}
+body.high-contrast .box .ex{color:#bbb}
+body.high-contrast .rule-box{background:#1a1a1a;border-color:#555}
+body.high-contrast .ri-body{color:#e8e8e8}
+body.high-contrast .ri-body .ex{color:#aaa}
+body.high-contrast .hc{background:#111}
+body.high-contrast .hc:nth-child(4n+3),.high-contrast .hc:nth-child(4n+4){background:#1a1a1a}
+body.high-contrast .hc .subj{color:#aaa}
+body.high-contrast .hc .form{color:#ff9999}
+body.high-contrast .pc .part{background:#111;color:#ffaaaa}
+body.high-contrast .smoke,.high-contrast .sub-title{color:#ddd}
+body.high-contrast .smoke{background:#1a1a1a}
+body.high-contrast tr.alt td{background:#1a1a1a}
+body.high-contrast .ct td{color:#ccc;border-color:#444}
+body.high-contrast .ct td.lbl{color:#fff}
+body.high-contrast .ct tr:nth-child(even) td{background:#1a1a1a}
+body.high-contrast .tip{background:#1a1a1a;border-color:#444}
+body.high-contrast .tip p{color:#ccc}
+body.high-contrast .tip strong{color:#fff}
+body.high-contrast .tpill{background:#1a0a1a;border-color:#8a4a8a}
+body.high-contrast .tpill .ex{color:#aaa}
+body.high-contrast .dish-form{color:#e0e0e0;border-color:#444}
+body.high-contrast .dish-col:nth-child(odd) .dish-form{background:#1a1a1a}
+body.high-contrast .dish-col:nth-child(even) .dish-form{background:#111}
+body.high-contrast .placeholder{background:#1a1200;border-color:#d4a017;color:#f0c040}
+body.high-contrast .alert-bar{background:#1a1200;border-color:#d4a017;color:#f0e8c0}
+body.high-contrast .sub-title{border-color:#555!important}
+body.high-contrast .hero{background:#1a0000}
+@media(max-width:860px){.a11y-bar{left:0;padding-left:16px;padding-right:16px}}
+
 </style>
 </head>
 <body>
@@ -182,6 +265,7 @@ tr.alt td{background:var(--smoke)}
   <ul class="nav-list">
     <li><a href="#gram42"><span class="num">42</span>Participio Pasado</a></li>
     <li><a href="#gram43"><span class="num">43</span>Presente Perfecto</a></li>
+    <li><a href="#gram43b"><span class="num">43+</span>Pluscuamperfecto</a></li>
     <li><a href="#vocab-ma"><span class="num">▸</span>Medio Ambiente</a></li>
     <li><a href="#vocab-viv"><span class="num">▸</span>Vivienda</a></li>
     <li><a href="#vocab-trans"><span class="num">▸</span>Transporte</a></li>
@@ -190,6 +274,7 @@ tr.alt td{background:var(--smoke)}
   <div class="nav-group">Capítulo 16</div>
   <ul class="nav-list">
     <li><a href="#gram44"><span class="num">44</span>Subjuntivo</a></li>
+    <li><a href="#gram44b"><span class="num">44+</span>Pres. Perf. Subj.</a></li>
     <li><a href="#vocab-rel"><span class="num">▸</span>Relaciones Personales</a></li>
     <li><a href="#vocab-etapas"><span class="num">▸</span>Etapas de la Vida</a></li>
     <li><a href="#vocab-lugares"><span class="num">▸</span>Lugares / Ceremonias</a></li>
@@ -207,6 +292,17 @@ tr.alt td{background:var(--smoke)}
 <!-- MAIN -->
 <main class="main">
 
+
+<!-- Accessibility toolbar -->
+<div class="a11y-bar" role="toolbar" aria-label="Opciones de accesibilidad">
+  <span class="a11y-label">Texto:</span>
+  <button class="a11y-btn active" id="btnNormal"  onclick="setSize('normal')"  aria-label="Tamaño normal">A</button>
+  <button class="a11y-btn"        id="btnLarge"   onclick="setSize('large')"   aria-label="Texto grande">A+</button>
+  <button class="a11y-btn"        id="btnXLarge"  onclick="setSize('xlarge')"  aria-label="Texto muy grande">A++</button>
+  <span class="a11y-divider"></span>
+  <button class="a11y-btn"        id="btnContrast" onclick="toggleContrast()" aria-label="Alto contraste" title="Alto contraste">◑ Contraste</button>
+</div>
+
 <header class="hero">
   <div class="hero-kicker">LSU · SPAN 2102 · Spring 2026</div>
   <h1>Guía de Estudio<br>Examen Parcial</h1>
@@ -215,7 +311,9 @@ tr.alt td{background:var(--smoke)}
     <span class="chip gold">Gramáticas 42 · 43 · 44</span>
     <span class="chip">Participio Pasado</span>
     <span class="chip">Presente Perfecto</span>
+    <span class="chip">Pluscuamperfecto</span>
     <span class="chip">Subjuntivo · DISHES</span>
+    <span class="chip">Pres. Perf. Subjuntivo</span>
     <span class="chip">Relaciones Personales</span>
     <span class="chip">Cultura: Argentina &amp; Uruguay</span>
   </div>
@@ -359,6 +457,72 @@ tr.alt td{background:var(--smoke)}
 </div>
 
 <!-- ════════════════════════════════════════════
+     GRAMÁTICA 43+ — PLUSCUAMPERFECTO
+═════════════════════════════════════════════ -->
+<div class="card" id="gram43b">
+  <div class="card-head cr">
+    <div class="card-num">43+</div>
+    <div class="card-title">
+      <div class="lbl">Gramática · Cap. 15</div>
+      <h2>El Pluscuamperfecto — había + participio</h2>
+    </div>
+    <span class="card-chap">Cap. 15</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title cr">¿Qué es el pluscuamperfecto?</div>
+      <div class="box tl">
+        <p>El pluscuamperfecto expresa una acción que ocurrió <strong>antes</strong> de otra acción pasada — el "past perfect" en inglés.</p>
+        <span class="ex">Cuando llegué a casa, mis amigos <em>ya habían comido</em>. &nbsp;→ They had already eaten (before I arrived).</span>
+        <span class="ex">Antes de ese viaje, ella nunca <em>había visto</em> agua tan contaminada.</span>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title cr">Formación: HABER (imperfecto) + participio pasado invariable</div>
+      <div class="haber-grid">
+        <div class="hc"><span class="subj">yo</span><span class="form">había</span></div>
+        <div class="hc"><span class="subj">nosotros</span><span class="form">habíamos</span></div>
+        <div class="hc"><span class="subj">tú</span><span class="form">habías</span></div>
+        <div class="hc"><span class="subj">vosotros</span><span class="form">habíais</span></div>
+        <div class="hc"><span class="subj">él / ella / Ud.</span><span class="form">había</span></div>
+        <div class="hc"><span class="subj">ellos / Uds.</span><span class="form">habían</span></div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title cr">Presente perfecto vs. Pluscuamperfecto</div>
+      <table class="ct">
+        <thead><tr><th class="pret">Presente perfecto</th><th class="perf">Pluscuamperfecto</th></tr></thead>
+        <tbody>
+          <tr><td class="lbl">HABER presente + participio</td><td class="lbl">HABER imperfecto + participio</td></tr>
+          <tr><td class="lbl">Acción pasada con relevancia al presente</td><td class="lbl">Acción anterior a otro evento pasado</td></tr>
+          <tr><td>he visto / hemos comido</td><td>había visto / habíamos comido</td></tr>
+          <tr><td>¿Has visitado Argentina?</td><td>Antes de 2020, nunca había viajado.</td></tr>
+          <tr><td>Todavía no han llegado.</td><td>Cuando llamé, ya habían salido.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title cr">Expresiones clave con el pluscuamperfecto</div>
+      <table class="vt cr">
+        <thead><tr><th>Expresión</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>antes de + evento pasado</td><td>Antes de ese viaje, nunca <em>había visto</em> un glaciar.</td></tr>
+          <tr class="alt"><td>cuando + pretérito</td><td>Cuando el verano empezó, todavía no los <em>habíamos puesto</em>.</td></tr>
+          <tr><td>nunca antes / jamás</td><td>Antes de este año, nunca <em>había participado</em> en un club ecologista.</td></tr>
+          <tr class="alt"><td>ya (already — before that point)</td><td>Cuando llegué, ella ya <em>había salido</em>.</td></tr>
+          <tr><td>todavía no (not yet — at that past moment)</td><td>Todavía no <em>habíamos resuelto</em> el problema.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
      GRAMÁTICA 44 — SUBJUNTIVO + DISHES
 ═════════════════════════════════════════════ -->
 <div class="card" id="gram44">
@@ -448,6 +612,77 @@ tr.alt td{background:var(--smoke)}
         <p><strong>Otros irregulares frecuentes</strong> — se forman desde el <em>yo</em> del presente indicativo (quita la -o, añade terminación contraria):</p>
         <span class="ex">hacer→<em>haga</em> &nbsp;|&nbsp; tener→<em>tenga</em> &nbsp;|&nbsp; poder→<em>pueda</em> &nbsp;|&nbsp; poner→<em>ponga</em> &nbsp;|&nbsp; venir→<em>venga</em> &nbsp;|&nbsp; salir→<em>salga</em></span>
       </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     GRAMÁTICA 44b — PRESENTE PERFECTO DE SUBJUNTIVO
+═════════════════════════════════════════════ -->
+<div class="card" id="gram44b">
+  <div class="card-head pl">
+    <div class="card-num">44+</div>
+    <div class="card-title">
+      <div class="lbl">Gramática · Caps. 15 &amp; 16</div>
+      <h2>El Presente Perfecto de Subjuntivo</h2>
+    </div>
+    <span class="card-chap">Caps. 15 &amp; 16</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title pl">¿Qué es?</div>
+      <div class="box pl">
+        <p>Combina el presente perfecto con el subjuntivo. Se usa cuando la cláusula principal requiere subjuntivo y la acción subordinada es <strong>pasada pero con relevancia al presente</strong>.</p>
+        <span class="ex">Es increíble que los científicos <strong>hayan descubierto</strong> nuevas formas de energía solar.</span>
+        <span class="ex">Me sorprende que el gobierno <strong>haya hecho</strong> una ley para el reciclaje.</span>
+        <span class="ex">No creo que la organización <strong>haya abierto</strong> refugios para especies en peligro.</span>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title pl">Formación: HABER (subjuntivo) + participio pasado invariable</div>
+      <div class="haber-grid">
+        <div class="hc"><span class="subj">yo</span><span class="form">haya</span></div>
+        <div class="hc"><span class="subj">nosotros</span><span class="form">hayamos</span></div>
+        <div class="hc"><span class="subj">tú</span><span class="form">hayas</span></div>
+        <div class="hc"><span class="subj">vosotros</span><span class="form">hayáis</span></div>
+        <div class="hc"><span class="subj">él / ella / Ud.</span><span class="form">haya</span></div>
+        <div class="hc"><span class="subj">ellos / Uds.</span><span class="form">hayan</span></div>
+      </div>
+      <div class="box gd" style="margin-top:12px">
+        <p>⚠️ <strong>haya</strong> es la forma de <em>haber</em> en el subjuntivo — ¡la H de DISHES!</p>
+        <span class="ex">Indicativo: <em>ha hecho</em> &nbsp;→&nbsp; Subjuntivo: <em>haya hecho</em></span>
+        <span class="ex">Indicativo: <em>han descubierto</em> &nbsp;→&nbsp; Subjuntivo: <em>hayan descubierto</em></span>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title pl">Cuándo usarlo — expresiones gatillo</div>
+      <table class="vt pl">
+        <thead><tr><th>Expresión gatillo (+ subjuntivo)</th><th>Ejemplo con pres. perf. de subjuntivo</th></tr></thead>
+        <tbody>
+          <tr><td>Es increíble / sorprendente que…</td><td>Es increíble que <em>hayan resuelto</em> el problema.</td></tr>
+          <tr class="alt"><td>Me sorprende / alegra / molesta que…</td><td>Me sorprende que el gobierno <em>haya hecho</em> esa ley.</td></tr>
+          <tr><td>No creo / dudo que…</td><td>No creo que <em>hayan abierto</em> el refugio todavía.</td></tr>
+          <tr class="alt"><td>Es bueno / malo / importante que…</td><td>Es bueno que <em>hayamos reciclado</em> tanto este año.</td></tr>
+          <tr><td>Ojalá que…</td><td>Ojalá que <em>hayan protegido</em> los recursos naturales.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title pl">⚠️ Indicativo vs. Subjuntivo — mismo tiempo, diferente modo</div>
+      <table class="ct">
+        <thead><tr><th class="pret">Presente perfecto INDICATIVO</th><th class="perf">Presente perfecto SUBJUNTIVO</th></tr></thead>
+        <tbody>
+          <tr><td class="lbl">Certeza / expresiones afirmativas</td><td class="lbl">Duda, emoción, deseo, negación</td></tr>
+          <tr><td>Creo que han <em>contaminado</em> el río.</td><td>No creo que hayan <em>contaminado</em> el río.</td></tr>
+          <tr><td>Es cierto que han <em>descubierto</em> energía solar.</td><td>Es increíble que hayan <em>descubierto</em> energía solar.</td></tr>
+          <tr><td>Estoy segura de que han <em>resuelto</em> el problema.</td><td>Dudo que hayan <em>resuelto</em> el problema.</td></tr>
+        </tbody>
+      </table>
     </div>
 
   </div>
@@ -700,7 +935,12 @@ tr.alt td{background:var(--smoke)}
       <div class="tip">
         <span class="tip-icon">⏱️</span>
         <div class="tip-head">Presente Perfecto · Cap. 15</div>
-        <p>HABER + participio invariable. Con <strong>ayer</strong> → siempre pretérito. Palabras clave: <strong>ya, todavía no, alguna vez, nunca, recientemente</strong>.</p>
+        <p>HABER presente + participio invariable. Con <strong>ayer</strong> → siempre pretérito. Palabras clave: <strong>ya, todavía no, alguna vez, nunca, recientemente</strong>.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">⏮️</span>
+        <div class="tip-head">Pluscuamperfecto · Cap. 15</div>
+        <p>HABER <strong>imperfecto</strong> (había/habías…) + participio. Expresa lo que ya había pasado <strong>antes</strong> de otro evento pasado. Señales: <em>antes de, cuando, nunca antes, ya, todavía no</em>.</p>
       </div>
       <div class="tip">
         <span class="tip-icon">🍽️</span>
@@ -711,6 +951,11 @@ tr.alt td{background:var(--smoke)}
         <span class="tip-icon">🔀</span>
         <div class="tip-head">Indicativo vs. Subjuntivo · Cap. 16</div>
         <p>¿El antecedente es <strong>conocido y específico</strong>? → indicativo. ¿<strong>Indefinido / hipotético / inexistente</strong>? → subjuntivo. Lee toda la oración antes de decidir.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">🔁</span>
+        <div class="tip-head">Pres. Perf. Subjuntivo · Caps. 15 &amp; 16</div>
+        <p><strong>haya / hayas / haya / hayamos / hayan</strong> + participio. Úsalo cuando la cláusula principal exige subjuntivo y la acción es pasada: <em>Es increíble que hayan descubierto…, No creo que haya abierto…</em></p>
       </div>
       <div class="tip">
         <span class="tip-icon">💬</span>
@@ -749,5 +994,30 @@ document.querySelector('.back-top').addEventListener('click', e => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
+
+<script>
+function setSize(size){
+  document.body.classList.remove('size-large','size-xlarge');
+  if(size==='large') document.body.classList.add('size-large');
+  if(size==='xlarge') document.body.classList.add('size-xlarge');
+  document.querySelectorAll('.a11y-btn').forEach(b=>b.classList.remove('active'));
+  const map={normal:'btnNormal',large:'btnLarge',xlarge:'btnXLarge'};
+  document.getElementById(map[size]).classList.add('active');
+  try{localStorage.setItem('a11y-size',size)}catch(e){}
+}
+function toggleContrast(){
+  const on = document.body.classList.toggle('high-contrast');
+  document.getElementById('btnContrast').classList.toggle('active',on);
+  try{localStorage.setItem('a11y-contrast',on?'1':'')}catch(e){}
+}
+// Restore preferences
+try{
+  const s=localStorage.getItem('a11y-size');
+  const c=localStorage.getItem('a11y-contrast');
+  if(s && s!=='normal') setSize(s);
+  if(c) toggleContrast();
+}catch(e){}
+</script>
+
 </body>
 </html>
