@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SPAN 2102 — Guía de Estudio | Caps. 15 &amp; 16</title>
+<title>SPAN 2102 — Guía de Estudio | Ch. 15–16</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -47,8 +47,6 @@ body{font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.85;
 .chip.gold{background:rgba(245,200,66,.14);border-color:rgba(245,200,66,.4);color:#F5C842}
 
 /* ALERT */
-.alert-bar{background:var(--gd-lt);border-left:4px solid var(--gd);padding:16px 52px;font-size:16px;color:var(--sl);display:flex;gap:12px;align-items:flex-start}
-.alert-bar strong{color:var(--gd)}
 
 /* CONTENT */
 .content{padding:44px 52px 80px}
@@ -171,7 +169,7 @@ a:focus{text-decoration:underline}
 /* RESPONSIVE */
 @media(max-width:860px){
   .sidebar{display:none}.main{margin-left:0}
-  .hero,.alert-bar,.content{padding-left:22px;padding-right:22px}
+  .hero,.content{padding-left:22px;padding-right:22px}
   .tips-grid{grid-template-columns:1fr}
   .dishes-grid{grid-template-columns:repeat(3,1fr)}
 }
@@ -244,8 +242,7 @@ body.high-contrast .dish-form{color:#e0e0e0;border-color:#444}
 body.high-contrast .dish-col:nth-child(odd) .dish-form{background:#1a1a1a}
 body.high-contrast .dish-col:nth-child(even) .dish-form{background:#111}
 body.high-contrast .placeholder{background:#1a1200;border-color:#d4a017;color:#f0c040}
-body.high-contrast .alert-bar{background:#1a1200;border-color:#d4a017;color:#f0e8c0}
-body.high-contrast .sub-title{border-color:#555!important}
+body.high-contrast body.high-contrast .sub-title{border-color:#555!important}
 body.high-contrast .hero{background:#1a0000}
 @media(max-width:860px){.a11y-bar{left:0;padding-left:16px;padding-right:16px}}
 
@@ -258,14 +255,14 @@ body.high-contrast .hero{background:#1a0000}
   <div class="sb-brand">
     <div class="kicker">SPAN 2102 · Spring 2026</div>
     <div class="name">Guía de Estudio<br>Examen Parcial</div>
-    <div class="sub">Puntos de partida, Caps. 15 &amp; 16</div>
+    <div class="sub">Puntos de partida, Ch. 15–16</div>
   </div>
 
   <div class="nav-group">Capítulo 15</div>
   <ul class="nav-list">
     <li><a href="#gram42"><span class="num">42</span>Participio Pasado</a></li>
     <li><a href="#gram43"><span class="num">43</span>Presente Perfecto</a></li>
-    <li><a href="#gram43b"><span class="num">43+</span>Pluscuamperfecto</a></li>
+    <li><a href="#gram43b"><span class="num">43+</span>Past Perfect</a></li>
     <li><a href="#vocab-ma"><span class="num">▸</span>Medio Ambiente</a></li>
     <li><a href="#vocab-viv"><span class="num">▸</span>Vivienda</a></li>
     <li><a href="#vocab-trans"><span class="num">▸</span>Transporte</a></li>
@@ -274,13 +271,13 @@ body.high-contrast .hero{background:#1a0000}
   <div class="nav-group">Capítulo 16</div>
   <ul class="nav-list">
     <li><a href="#gram44"><span class="num">44</span>Subjuntivo</a></li>
-    <li><a href="#gram44b"><span class="num">44+</span>Pres. Perf. Subj.</a></li>
+    <li><a href="#gram44b"><span class="num">44+</span>Pres. Perf. Subjunctive</a></li>
     <li><a href="#vocab-rel"><span class="num">▸</span>Relaciones Personales</a></li>
     <li><a href="#vocab-etapas"><span class="num">▸</span>Etapas de la Vida</a></li>
     <li><a href="#vocab-lugares"><span class="num">▸</span>Lugares / Ceremonias</a></li>
   </ul>
 
-  <div class="nav-group">Más</div>
+  <div class="nav-group">More</div>
   <ul class="nav-list">
     <li><a href="#cultura"><span class="num">★</span>Cultura</a></li>
     <li><a href="#tips"><span class="num">✓</span>Estrategias</a></li>
@@ -295,12 +292,12 @@ body.high-contrast .hero{background:#1a0000}
 
 <!-- Accessibility toolbar -->
 <div class="a11y-bar" role="toolbar" aria-label="Opciones de accesibilidad">
-  <span class="a11y-label">Texto:</span>
-  <button class="a11y-btn active" id="btnNormal"  onclick="setSize('normal')"  aria-label="Tamaño normal">A</button>
-  <button class="a11y-btn"        id="btnLarge"   onclick="setSize('large')"   aria-label="Texto grande">A+</button>
-  <button class="a11y-btn"        id="btnXLarge"  onclick="setSize('xlarge')"  aria-label="Texto muy grande">A++</button>
+  <span class="a11y-label">Text size:</span>
+  <button class="a11y-btn active" id="btnNormal"  onclick="setSize('normal')"  aria-label="Normal size">A</button>
+  <button class="a11y-btn"        id="btnLarge"   onclick="setSize('large')"   aria-label="Large text">A+</button>
+  <button class="a11y-btn"        id="btnXLarge"  onclick="setSize('xlarge')"  aria-label="Extra large text">A++</button>
   <span class="a11y-divider"></span>
-  <button class="a11y-btn"        id="btnContrast" onclick="toggleContrast()" aria-label="Alto contraste" title="Alto contraste">◑ Contraste</button>
+  <button class="a11y-btn"        id="btnContrast" onclick="toggleContrast()" aria-label="High contrast" title="Alto contraste">◑ Contrast</button>
 </div>
 
 <header class="hero">
@@ -311,21 +308,15 @@ body.high-contrast .hero{background:#1a0000}
     <span class="chip gold">Gramáticas 42 · 43 · 44</span>
     <span class="chip">Participio Pasado</span>
     <span class="chip">Presente Perfecto</span>
-    <span class="chip">Pluscuamperfecto</span>
+    <span class="chip">Past Perfect</span>
     <span class="chip">Subjuntivo · DISHES</span>
-    <span class="chip">Pres. Perf. Subjuntivo</span>
+    <span class="chip">Pres. Perf. Subjunctive</span>
     <span class="chip">Relaciones Personales</span>
     <span class="chip">Cultura: Argentina &amp; Uruguay</span>
   </div>
 </header>
 
-<div class="alert-bar">
-  <span>📋</span>
-  <div><strong>Formato del examen:</strong>
-    Secciones I–IV → <strong>SCANTRON</strong> (A / B / C / D) &nbsp;|&nbsp;
-    Sección V (Cultura) → responde <strong>por escrito</strong> en el papel del examen.
-    El verbo en rojo entre paréntesis indica qué forma conjugar.
-  </div>
+
 </div>
 
 <div class="content">
@@ -337,15 +328,15 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head cr">
     <div class="card-num">42</div>
     <div class="card-title">
-      <div class="lbl">Gramática · Cap. 15</div>
-      <h2>El Participio Pasado</h2>
+      <div class="lbl">Grammar · Ch. 15</div>
+      <h2>The Past Participle</h2>
     </div>
-    <span class="card-chap">Cap. 15</span>
+    <span class="card-chap">Ch. 15</span>
   </div>
   <div class="card-body">
 
     <div class="sub">
-      <div class="sub-title cr">Formación regular</div>
+      <div class="sub-title cr">How to form it regular</div>
       <table class="vt cr">
         <thead><tr><th>Terminación</th><th>→ Participio</th><th>Ejemplos</th></tr></thead>
         <tbody>
@@ -358,7 +349,7 @@ body.high-contrast .hero{background:#1a0000}
 
     <div class="sub">
       <div class="sub-title cr">⚠️ Participios irregulares — ¡Memoriza todos!</div>
-      <div class="box gd"><p>Estos verbos <strong>NO</strong> siguen el patrón regular. Son los más frecuentes en el examen.</p></div>
+      <div class="box gd"><p>These verbs do <strong>NOT</strong> follow the regular pattern — they are the most important to memorize.</p></div>
       <div class="pc-grid">
         <div class="pc"><div class="inf">abrir</div><div class="part">abierto</div></div>
         <div class="pc"><div class="inf">decir</div><div class="part">dicho</div></div>
@@ -397,15 +388,15 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head cr">
     <div class="card-num">43</div>
     <div class="card-title">
-      <div class="lbl">Gramática · Cap. 15</div>
-      <h2>El Presente Perfecto</h2>
+      <div class="lbl">Grammar · Ch. 15</div>
+      <h2>The Present Perfect</h2>
     </div>
-    <span class="card-chap">Cap. 15</span>
+    <span class="card-chap">Ch. 15</span>
   </div>
   <div class="card-body">
 
     <div class="sub">
-      <div class="sub-title cr">Formación: HABER (presente) + participio pasado invariable</div>
+      <div class="sub-title cr">How to form it: HABER (presente) + participio pasado invariable</div>
       <div class="haber-grid">
         <div class="hc"><span class="subj">yo</span><span class="form">he</span></div>
         <div class="hc"><span class="subj">nosotros</span><span class="form">hemos</span></div>
@@ -425,9 +416,9 @@ body.high-contrast .hero{background:#1a0000}
     </div>
 
     <div class="sub">
-      <div class="sub-title tl">Adverbios clave con el presente perfecto</div>
+      <div class="sub-title tl">Key adverbs with the present perfect</div>
       <table class="vt tl">
-        <thead><tr><th>Expresión</th><th>Inglés</th><th>Ejemplo</th></tr></thead>
+        <thead><tr><th>Expression</th><th>English</th><th>Example (in Spanish)</th></tr></thead>
         <tbody>
           <tr><td>ya</td><td>already</td><td>¿Ya te has casado?</td></tr>
           <tr class="alt"><td>todavía no</td><td>not yet</td><td>Todavía no nos hemos divorciado.</td></tr>
@@ -440,11 +431,11 @@ body.high-contrast .hero{background:#1a0000}
     </div>
 
     <div class="sub">
-      <div class="sub-title cr">Pretérito vs. Presente Perfecto</div>
+      <div class="sub-title cr">Preterite vs. Present Perfect</div>
       <table class="ct">
-        <thead><tr><th class="pret">Pretérito indefinido</th><th class="perf">Presente perfecto</th></tr></thead>
+        <thead><tr><th class="pret">Preterite (simple past)</th><th class="perf">Present Perfect</th></tr></thead>
         <tbody>
-          <tr><td class="lbl">Tiempo específico y terminado</td><td class="lbl">Relevancia / conexión con el presente</td></tr>
+          <tr><td class="lbl">Specific, completed past time</td><td class="lbl">Relevance / connection to the present</td></tr>
           <tr><td>Ayer me enamoré de ti.</td><td>Siempre me he enamorado rápido.</td></tr>
           <tr><td>En 2020 se casaron.</td><td>Este año se han divorciado.</td></tr>
           <tr><td>Conocí a mi novia en 2018.</td><td>Hemos vivido juntos dos años.</td></tr>
@@ -463,24 +454,24 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head cr">
     <div class="card-num">43+</div>
     <div class="card-title">
-      <div class="lbl">Gramática · Cap. 15</div>
-      <h2>El Pluscuamperfecto — había + participio</h2>
+      <div class="lbl">Grammar · Ch. 15</div>
+      <h2>The Past Perfect (Pluperfect) — había + participio</h2>
     </div>
-    <span class="card-chap">Cap. 15</span>
+    <span class="card-chap">Ch. 15</span>
   </div>
   <div class="card-body">
 
     <div class="sub">
-      <div class="sub-title cr">¿Qué es el pluscuamperfecto?</div>
+      <div class="sub-title cr">What is the past perfect?</div>
       <div class="box tl">
-        <p>El pluscuamperfecto expresa una acción que ocurrió <strong>antes</strong> de otra acción pasada — el "past perfect" en inglés.</p>
+        <p>The past perfect expresses an action that happened <strong>before</strong> another past action.</p>
         <span class="ex">Cuando llegué a casa, mis amigos <em>ya habían comido</em>. &nbsp;→ They had already eaten (before I arrived).</span>
         <span class="ex">Antes de ese viaje, ella nunca <em>había visto</em> agua tan contaminada.</span>
       </div>
     </div>
 
     <div class="sub">
-      <div class="sub-title cr">Formación: HABER (imperfecto) + participio pasado invariable</div>
+      <div class="sub-title cr">How to form it: HABER (imperfecto) + participio pasado invariable</div>
       <div class="haber-grid">
         <div class="hc"><span class="subj">yo</span><span class="form">había</span></div>
         <div class="hc"><span class="subj">nosotros</span><span class="form">habíamos</span></div>
@@ -492,12 +483,12 @@ body.high-contrast .hero{background:#1a0000}
     </div>
 
     <div class="sub">
-      <div class="sub-title cr">Presente perfecto vs. Pluscuamperfecto</div>
+      <div class="sub-title cr">Present perfect vs. Past perfect</div>
       <table class="ct">
-        <thead><tr><th class="pret">Presente perfecto</th><th class="perf">Pluscuamperfecto</th></tr></thead>
+        <thead><tr><th class="pret">Present Perfect (he/has…)</th><th class="perf">Past Perfect (había…)</th></tr></thead>
         <tbody>
-          <tr><td class="lbl">HABER presente + participio</td><td class="lbl">HABER imperfecto + participio</td></tr>
-          <tr><td class="lbl">Acción pasada con relevancia al presente</td><td class="lbl">Acción anterior a otro evento pasado</td></tr>
+          <tr><td class="lbl">HABER present + participle</td><td class="lbl">HABER imperfect + participle</td></tr>
+          <tr><td class="lbl">Past action with present relevance</td><td class="lbl">Action that happened before another past event</td></tr>
           <tr><td>he visto / hemos comido</td><td>había visto / habíamos comido</td></tr>
           <tr><td>¿Has visitado Argentina?</td><td>Antes de 2020, nunca había viajado.</td></tr>
           <tr><td>Todavía no han llegado.</td><td>Cuando llamé, ya habían salido.</td></tr>
@@ -506,9 +497,9 @@ body.high-contrast .hero{background:#1a0000}
     </div>
 
     <div class="sub">
-      <div class="sub-title cr">Expresiones clave con el pluscuamperfecto</div>
+      <div class="sub-title cr">Key time expressions with the past perfect</div>
       <table class="vt cr">
-        <thead><tr><th>Expresión</th><th>Ejemplo</th></tr></thead>
+        <thead><tr><th>Expression</th><th>Example (in Spanish)</th></tr></thead>
         <tbody>
           <tr><td>antes de + evento pasado</td><td>Antes de ese viaje, nunca <em>había visto</em> un glaciar.</td></tr>
           <tr class="alt"><td>cuando + pretérito</td><td>Cuando el verano empezó, todavía no los <em>habíamos puesto</em>.</td></tr>
@@ -529,38 +520,38 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head pl">
     <div class="card-num">44</div>
     <div class="card-title">
-      <div class="lbl">Gramática · Cap. 16</div>
-      <h2>El Subjuntivo con Antecedentes Indefinidos</h2>
+      <div class="lbl">Grammar · Ch. 16</div>
+      <h2>The Subjunctive with Indefinite Antecedents</h2>
     </div>
-    <span class="card-chap">Cap. 16</span>
+    <span class="card-chap">Ch. 16</span>
   </div>
   <div class="card-body">
 
     <div class="sub">
-      <div class="sub-title pl">La regla fundamental</div>
+      <div class="sub-title pl">The fundamental rule</div>
       <div class="rule-box">
         <div class="ri">
           <span class="badge b-ind">INDICATIVO</span>
           <div class="ri-body">
-            El antecedente <strong>ES conocido / existe</strong> — persona o cosa específica y real.
-            <span class="ex">Busco a <u>la chica</u> que <strong>habla</strong> guaraní. <span class="why">→ Ya sé quién es</span></span>
-            <span class="ex">Tengo <u>un amigo</u> que <strong>conoce</strong> Buenos Aires. <span class="why">→ Amigo real y específico</span></span>
+            The antecedent <strong>IS known / exists</strong> — a specific, real person or thing.
+            <span class="ex">Busco a <u>la chica</u> que <strong>habla</strong> guaraní. <span class="why">→ I already know who she is</span></span>
+            <span class="ex">Tengo <u>un amigo</u> que <strong>conoce</strong> Buenos Aires. <span class="why">→ A real, specific friend</span></span>
           </div>
         </div>
         <div class="ri">
           <span class="badge b-sub">SUBJUNTIVO</span>
           <div class="ri-body">
-            El antecedente <strong>es indefinido / no existe / es hipotético</strong>.
-            <span class="ex">Busco <u>una pareja</u> que <strong>hable</strong> guaraní. <span class="why">→ No sé si existe</span></span>
-            <span class="ex">No hay <u>nadie</u> que <strong>sepa</strong> bailar tango aquí. <span class="why">→ nadie = inexistente</span></span>
-            <span class="ex">¿Hay <u>alguien</u> que <strong>pueda</strong> recomendarme un barrio? <span class="why">→ indefinido</span></span>
+            The antecedent <strong>is indefinite / does not exist / is hypothetical</strong>.
+            <span class="ex">Busco <u>una pareja</u> que <strong>hable</strong> guaraní. <span class="why">→ I don't know if she exists</span></span>
+            <span class="ex">No hay <u>nadie</u> que <strong>sepa</strong> bailar tango aquí. <span class="why">→ nadie = no one exists</span></span>
+            <span class="ex">¿Hay <u>alguien</u> que <strong>pueda</strong> recomendarme un barrio? <span class="why">→ indefinite — may not exist</span></span>
           </div>
         </div>
       </div>
     </div>
 
     <div class="sub">
-      <div class="sub-title pl">Palabras gatillo frecuentes</div>
+      <div class="sub-title pl">Common trigger words</div>
       <div class="trigger-grid">
         <div class="tpill"><span class="term">alguien que…</span><span class="ex">¿Hay alguien que sepa la respuesta?</span></div>
         <div class="tpill"><span class="term">nadie que…</span><span class="ex">No hay nadie que quiera ir.</span></div>
@@ -572,9 +563,9 @@ body.high-contrast .hero{background:#1a0000}
     </div>
 
     <div class="sub">
-      <div class="sub-title pl">🍽️ Irregulares del subjuntivo — mnemónico DISHES</div>
+      <div class="sub-title pl">Irregular subjunctive forms — DISHES mnemonic</div>
       <div class="dishes-wrap">
-        <div class="dishes-label">D · I · S · H · E · S — los 6 completamente irregulares</div>
+        <div class="dishes-label">D · I · S · H · E · S — the 6 completely irregular subjunctive verbs</div>
         <div class="dishes-grid">
           <div class="dish-col">
             <div class="dish-letter">D</div><div class="dish-verb">dar</div>
@@ -609,7 +600,7 @@ body.high-contrast .hero{background:#1a0000}
         </div>
       </div>
       <div class="box pl" style="margin-top:14px">
-        <p><strong>Otros irregulares frecuentes</strong> — se forman desde el <em>yo</em> del presente indicativo (quita la -o, añade terminación contraria):</p>
+        <p><strong>Other common irregulars</strong> — formed from the <em>yo</em> form of the present indicative (drop -o, add the opposite ending):</p>
         <span class="ex">hacer→<em>haga</em> &nbsp;|&nbsp; tener→<em>tenga</em> &nbsp;|&nbsp; poder→<em>pueda</em> &nbsp;|&nbsp; poner→<em>ponga</em> &nbsp;|&nbsp; venir→<em>venga</em> &nbsp;|&nbsp; salir→<em>salga</em></span>
       </div>
     </div>
@@ -624,17 +615,17 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head pl">
     <div class="card-num">44+</div>
     <div class="card-title">
-      <div class="lbl">Gramática · Caps. 15 &amp; 16</div>
-      <h2>El Presente Perfecto de Subjuntivo</h2>
+      <div class="lbl">Grammar · Ch. 15–16</div>
+      <h2>The Present Perfect Subjunctive</h2>
     </div>
-    <span class="card-chap">Caps. 15 &amp; 16</span>
+    <span class="card-chap">Ch. 15–16</span>
   </div>
   <div class="card-body">
 
     <div class="sub">
-      <div class="sub-title pl">¿Qué es?</div>
+      <div class="sub-title pl">What is it?</div>
       <div class="box pl">
-        <p>Combina el presente perfecto con el subjuntivo. Se usa cuando la cláusula principal requiere subjuntivo y la acción subordinada es <strong>pasada pero con relevancia al presente</strong>.</p>
+        <p>This tense combines the present perfect with the subjunctive. Use it when the main clause requires the subjunctive and the action in the subordinate clause is <strong>completed but still relevant to the present</strong>.</p>
         <span class="ex">Es increíble que los científicos <strong>hayan descubierto</strong> nuevas formas de energía solar.</span>
         <span class="ex">Me sorprende que el gobierno <strong>haya hecho</strong> una ley para el reciclaje.</span>
         <span class="ex">No creo que la organización <strong>haya abierto</strong> refugios para especies en peligro.</span>
@@ -642,7 +633,7 @@ body.high-contrast .hero{background:#1a0000}
     </div>
 
     <div class="sub">
-      <div class="sub-title pl">Formación: HABER (subjuntivo) + participio pasado invariable</div>
+      <div class="sub-title pl">How to form it: HABER (subjuntivo) + participio pasado invariable</div>
       <div class="haber-grid">
         <div class="hc"><span class="subj">yo</span><span class="form">haya</span></div>
         <div class="hc"><span class="subj">nosotros</span><span class="form">hayamos</span></div>
@@ -652,16 +643,16 @@ body.high-contrast .hero{background:#1a0000}
         <div class="hc"><span class="subj">ellos / Uds.</span><span class="form">hayan</span></div>
       </div>
       <div class="box gd" style="margin-top:12px">
-        <p>⚠️ <strong>haya</strong> es la forma de <em>haber</em> en el subjuntivo — ¡la H de DISHES!</p>
+        <p>⚠️ <strong>haya</strong> is the subjunctive form of <em>haber</em> — the H in DISHES!</p>
         <span class="ex">Indicativo: <em>ha hecho</em> &nbsp;→&nbsp; Subjuntivo: <em>haya hecho</em></span>
         <span class="ex">Indicativo: <em>han descubierto</em> &nbsp;→&nbsp; Subjuntivo: <em>hayan descubierto</em></span>
       </div>
     </div>
 
     <div class="sub">
-      <div class="sub-title pl">Cuándo usarlo — expresiones gatillo</div>
+      <div class="sub-title pl">When to use it — trigger expressions</div>
       <table class="vt pl">
-        <thead><tr><th>Expresión gatillo (+ subjuntivo)</th><th>Ejemplo con pres. perf. de subjuntivo</th></tr></thead>
+        <thead><tr><th>Trigger expression (+ subjunctive)</th><th>Example with pres. perf. subjunctive</th></tr></thead>
         <tbody>
           <tr><td>Es increíble / sorprendente que…</td><td>Es increíble que <em>hayan resuelto</em> el problema.</td></tr>
           <tr class="alt"><td>Me sorprende / alegra / molesta que…</td><td>Me sorprende que el gobierno <em>haya hecho</em> esa ley.</td></tr>
@@ -673,11 +664,11 @@ body.high-contrast .hero{background:#1a0000}
     </div>
 
     <div class="sub">
-      <div class="sub-title pl">⚠️ Indicativo vs. Subjuntivo — mismo tiempo, diferente modo</div>
+      <div class="sub-title pl">⚠️ Indicative vs. Subjunctive — same tense, different mood</div>
       <table class="ct">
-        <thead><tr><th class="pret">Presente perfecto INDICATIVO</th><th class="perf">Presente perfecto SUBJUNTIVO</th></tr></thead>
+        <thead><tr><th class="pret">Present Perfect — INDICATIVE</th><th class="perf">Present Perfect — SUBJUNCTIVE</th></tr></thead>
         <tbody>
-          <tr><td class="lbl">Certeza / expresiones afirmativas</td><td class="lbl">Duda, emoción, deseo, negación</td></tr>
+          <tr><td class="lbl">Certainty / affirmative expressions</td><td class="lbl">Doubt, emotion, desire, negation</td></tr>
           <tr><td>Creo que han <em>contaminado</em> el río.</td><td>No creo que hayan <em>contaminado</em> el río.</td></tr>
           <tr><td>Es cierto que han <em>descubierto</em> energía solar.</td><td>Es increíble que hayan <em>descubierto</em> energía solar.</td></tr>
           <tr><td>Estoy segura de que han <em>resuelto</em> el problema.</td><td>Dudo que hayan <em>resuelto</em> el problema.</td></tr>
@@ -695,17 +686,17 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head tl">
     <div class="card-num">▸</div>
     <div class="card-title">
-      <div class="lbl">Vocabulario · Cap. 15</div>
-      <h2>Medio Ambiente, Vivienda y Transporte</h2>
+      <div class="lbl">Vocabulary · Ch. 15</div>
+      <h2>Environment, Housing &amp; Transportation</h2>
     </div>
-    <span class="card-chap">Cap. 15</span>
+    <span class="card-chap">Ch. 15</span>
   </div>
   <div class="card-body">
 
     <div class="sub">
-      <div class="sub-title tl">El medio ambiente / The Environment</div>
+      <div class="sub-title tl">The Environment / El medio ambiente</div>
       <table class="vt tl">
-        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <thead><tr><th>Spanish</th><th>English</th></tr></thead>
         <tbody>
           <tr><td>el medio ambiente</td><td>environment</td></tr>
           <tr class="alt"><td>el cambio climático</td><td>climate change</td></tr>
@@ -724,7 +715,7 @@ body.high-contrast .hero{background:#1a0000}
     <div class="sub" id="vocab-viv">
       <div class="sub-title tl">La vivienda / Housing</div>
       <table class="vt tl">
-        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <thead><tr><th>Spanish</th><th>English</th></tr></thead>
         <tbody>
           <tr><td>el apartamento / el piso</td><td>apartment / flat</td></tr>
           <tr class="alt"><td>el alquiler</td><td>rent</td></tr>
@@ -742,7 +733,7 @@ body.high-contrast .hero{background:#1a0000}
     <div class="sub" id="vocab-trans">
       <div class="sub-title tl">El transporte / Transportation</div>
       <table class="vt tl">
-        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <thead><tr><th>Spanish</th><th>English</th></tr></thead>
         <tbody>
           <tr><td>el transporte público</td><td>public transportation</td></tr>
           <tr class="alt"><td>el autobús / el metro</td><td>bus / subway</td></tr>
@@ -766,10 +757,10 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head tl">
     <div class="card-num">▸</div>
     <div class="card-title">
-      <div class="lbl">Vocabulario · Cap. 16</div>
+      <div class="lbl">Vocabulary · Ch. 16</div>
       <h2>Las Relaciones Personales y los Estados Civiles</h2>
     </div>
-    <span class="card-chap">Cap. 16</span>
+    <span class="card-chap">Ch. 16</span>
   </div>
   <div class="card-body">
 
@@ -817,7 +808,7 @@ body.high-contrast .hero{background:#1a0000}
 
     <div class="sub">
       <div class="sub-title gd">⚠️ Adjetivos con ESTAR — estados civiles</div>
-      <div class="box gd"><p>Estos adjetivos se usan con <strong>ESTAR</strong> — describen un <em>estado</em>, no un rasgo permanente de carácter.</p></div>
+      <div class="box gd"><p>These adjectives are used with <strong>ESTAR</strong> — they describe a <em>state or condition</em>, not a permanent character trait.</p></div>
       <table class="vt gd" style="margin-top:11px">
         <thead><tr><th>Expresión</th><th>Traducción / Nota</th></tr></thead>
         <tbody>
@@ -838,7 +829,7 @@ body.high-contrast .hero{background:#1a0000}
     <div class="sub" id="vocab-etapas">
       <div class="sub-title tl">Las etapas de la vida</div>
       <table class="vt tl">
-        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <thead><tr><th>Spanish</th><th>English</th></tr></thead>
         <tbody>
           <tr><td>la infancia / la niñez</td><td>infancy; childhood</td></tr>
           <tr class="alt"><td>la adolescencia</td><td>adolescence</td></tr>
@@ -877,10 +868,10 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head dk">
     <div class="card-num">★</div>
     <div class="card-title">
-      <div class="lbl">Cultura · Cap. 15</div>
+      <div class="lbl">Cultura · Ch. 15</div>
       <h2>La Argentina y el Uruguay</h2>
     </div>
-    <span class="card-chap">Cap. 15</span>
+    <span class="card-chap">Ch. 15</span>
   </div>
   <div class="card-body">
 
@@ -906,7 +897,7 @@ body.high-contrast .hero{background:#1a0000}
       <div class="placeholder">
         <span class="icon">✏️</span>
         <p><strong>Este espacio está reservado para contenido adicional.</strong></p>
-        <p>Pega aquí personajes históricos, lecturas del Cap. 15,</p>
+        <p>Pega aquí personajes históricos, lecturas del Ch. 15,</p>
         <p>preguntas de práctica, o cualquier otro material de cultura.</p>
       </div>
     </div>
@@ -921,7 +912,7 @@ body.high-contrast .hero{background:#1a0000}
   <div class="card-head sl">
     <div class="card-num">✓</div>
     <div class="card-title">
-      <div class="lbl">Para el examen</div>
+      <div class="lbl">Exam Tips</div>
       <h2>Estrategias y Recordatorios</h2>
     </div>
   </div>
@@ -929,37 +920,37 @@ body.high-contrast .hero{background:#1a0000}
     <div class="tips-grid">
       <div class="tip">
         <span class="tip-icon">📝</span>
-        <div class="tip-head">Participio Pasado · Cap. 15</div>
+        <div class="tip-head">Participio Pasado · Ch. 15</div>
         <p>¿Regular <strong>(-ado / -ido)</strong> o irregular? Memoriza los 12 irregulares. Como adjetivo <strong>sí concuerda</strong>; en el presente perfecto es <strong>invariable</strong>.</p>
       </div>
       <div class="tip">
         <span class="tip-icon">⏱️</span>
-        <div class="tip-head">Presente Perfecto · Cap. 15</div>
+        <div class="tip-head">Presente Perfecto · Ch. 15</div>
         <p>HABER presente + participio invariable. Con <strong>ayer</strong> → siempre pretérito. Palabras clave: <strong>ya, todavía no, alguna vez, nunca, recientemente</strong>.</p>
       </div>
       <div class="tip">
         <span class="tip-icon">⏮️</span>
-        <div class="tip-head">Pluscuamperfecto · Cap. 15</div>
+        <div class="tip-head">Past Perfect · Ch. 15</div>
         <p>HABER <strong>imperfecto</strong> (había/habías…) + participio. Expresa lo que ya había pasado <strong>antes</strong> de otro evento pasado. Señales: <em>antes de, cuando, nunca antes, ya, todavía no</em>.</p>
       </div>
       <div class="tip">
         <span class="tip-icon">🍽️</span>
-        <div class="tip-head">DISHES · Cap. 16</div>
-        <p><strong>D</strong>ar · <strong>I</strong>r · <strong>S</strong>er · <strong>H</strong>aber · <strong>E</strong>star · <strong>S</strong>aber — los 6 completamente irregulares del subjuntivo. Todos los demás: yo del indicativo → quita la -o → añade terminación contraria.</p>
+        <div class="tip-head">DISHES · Ch. 16</div>
+        <p><strong>D</strong>ar · <strong>I</strong>r · <strong>S</strong>er · <strong>H</strong>aber · <strong>E</strong>star · <strong>S</strong>aber — the 6 completely irregular subjunctive verbs. All others: take the yo indicative form → drop -o → add the opposite ending.</p>
       </div>
       <div class="tip">
         <span class="tip-icon">🔀</span>
-        <div class="tip-head">Indicativo vs. Subjuntivo · Cap. 16</div>
+        <div class="tip-head">Indicativo vs. Subjuntivo · Ch. 16</div>
         <p>¿El antecedente es <strong>conocido y específico</strong>? → indicativo. ¿<strong>Indefinido / hipotético / inexistente</strong>? → subjuntivo. Lee toda la oración antes de decidir.</p>
       </div>
       <div class="tip">
         <span class="tip-icon">🔁</span>
-        <div class="tip-head">Pres. Perf. Subjuntivo · Caps. 15 &amp; 16</div>
+        <div class="tip-head">Pres. Perf. Subjuntivo · Ch. 15–16</div>
         <p><strong>haya / hayas / haya / hayamos / hayan</strong> + participio. Úsalo cuando la cláusula principal exige subjuntivo y la acción es pasada: <em>Es increíble que hayan descubierto…, No creo que haya abierto…</em></p>
       </div>
       <div class="tip">
         <span class="tip-icon">💬</span>
-        <div class="tip-head">Vocabulario · Cap. 16</div>
+        <div class="tip-head">Vocabulary · Ch. 16</div>
         <p>Aprende los <strong>verbos reflexivos</strong> (casarse, enamorarse, llevarse) y los <strong>adjetivos con ESTAR</strong> (casado/a, soltero/a, enamorado/a, recién casado/a). <em>Ser</em> = rasgo; <em>estar</em> = estado.</p>
       </div>
       <div class="tip">
