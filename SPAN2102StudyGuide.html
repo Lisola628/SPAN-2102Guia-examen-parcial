@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPAN 2102 — Guía de Estudio | Caps. 15 &amp; 16</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cr:#8B1A1A;--cr-dk:#5C0E0E;--cr-lt:#FDF0EF;
+  --pl:#4A1942;--pl-lt:#F5EDF5;
+  --tl:#0D5C6B;--tl-lt:#E4F4F7;--tl-dk:#083D48;
+  --gd:#9A6E00;--gd-lt:#FDF8E8;
+  --sl:#2C3E50;--smoke:#F7F5F2;--bone:#FFFEF9;
+  --ink:#1A1A1A;--mid:#5A5A5A;--rule:#DDD8D0;
+  --sw:256px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Serif 4',Georgia,serif;font-size:15.5px;line-height:1.75;color:var(--ink);background:var(--bone)}
+
+/* SIDEBAR */
+.sidebar{position:fixed;inset:0 auto 0 0;width:var(--sw);background:var(--cr-dk);display:flex;flex-direction:column;overflow-y:auto;z-index:200}
+.sb-brand{padding:26px 20px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+.sb-brand .kicker{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.sb-brand .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;line-height:1.25}
+.sb-brand .sub{font-size:12px;font-style:italic;color:rgba(255,255,255,.38);margin-top:5px}
+.nav-group{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);padding:16px 20px 4px}
+.nav-list{list-style:none}
+.nav-list a{display:flex;align-items:center;gap:10px;padding:8px 20px;font-size:13px;color:rgba(255,255,255,.62);text-decoration:none;border-left:3px solid transparent;transition:all .15s}
+.nav-list a .num{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.28);min-width:22px}
+.nav-list a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-list a.active{color:#fff;background:rgba(255,255,255,.1);border-left-color:#F5C842}
+.sb-footer{margin-top:auto;padding:14px 20px;border-top:1px solid rgba(255,255,255,.08);font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.22)}
+
+/* MAIN */
+.main{margin-left:var(--sw)}
+
+/* HERO */
+.hero{background:var(--cr-dk);background-image:radial-gradient(ellipse 60% 90% at 92% 8%,rgba(245,200,66,.15) 0%,transparent 55%),radial-gradient(ellipse 50% 60% at 5% 90%,rgba(74,25,66,.35) 0%,transparent 55%);padding:60px 52px 52px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;border:1px solid rgba(255,255,255,.05);pointer-events:none}
+.hero-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#F5C842;margin-bottom:14px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,50px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:10px}
+.hero-sub{font-size:16px;font-style:italic;color:rgba(255,255,255,.55);margin-bottom:30px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.72);background:rgba(255,255,255,.07);letter-spacing:.04em}
+.chip.gold{background:rgba(245,200,66,.14);border-color:rgba(245,200,66,.4);color:#F5C842}
+
+/* ALERT */
+.alert-bar{background:var(--gd-lt);border-left:4px solid var(--gd);padding:14px 52px;font-size:14px;color:var(--sl);display:flex;gap:12px;align-items:flex-start}
+.alert-bar strong{color:var(--gd)}
+
+/* CONTENT */
+.content{padding:44px 52px 80px}
+
+/* CARDS */
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07),0 1px 3px rgba(0,0,0,.04);margin-bottom:36px;overflow:hidden;border:1px solid var(--rule);animation:up .45s ease both}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.card:nth-child(2){animation-delay:.06s}.card:nth-child(3){animation-delay:.12s}.card:nth-child(4){animation-delay:.18s}.card:nth-child(5){animation-delay:.24s}.card:nth-child(6){animation-delay:.30s}.card:nth-child(7){animation-delay:.36s}
+.card-head{padding:18px 26px;display:flex;align-items:center;gap:16px}
+.card-head.cr{background:var(--cr)}.card-head.pl{background:var(--pl)}.card-head.tl{background:var(--tl)}.card-head.sl{background:var(--sl)}.card-head.dk{background:var(--tl-dk)}
+.card-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;font-style:italic;color:rgba(255,255,255,.18);line-height:1;min-width:38px}
+.card-title .lbl{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:2px}
+.card-title h2{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.2}
+.card-chap{font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 9px;border-radius:12px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);margin-left:auto;white-space:nowrap}
+.card-body{padding:26px 26px 30px}
+
+/* SUBSECTIONS */
+.sub{margin-bottom:26px}.sub:last-child{margin-bottom:0}
+.sub-title{font-family:'Playfair Display',serif;font-size:14.5px;font-weight:700;font-style:italic;margin-bottom:13px;padding-bottom:6px;border-bottom:1px solid;display:flex;align-items:center;gap:8px}
+.sub-title.cr{color:var(--cr);border-color:var(--cr-lt)}.sub-title.pl{color:var(--pl);border-color:var(--pl-lt)}.sub-title.tl{color:var(--tl);border-color:var(--tl-lt)}.sub-title.gd{color:var(--gd);border-color:var(--gd-lt)}
+
+/* VOCAB TABLE */
+.vt{width:100%;border-collapse:collapse;font-size:14px}
+.vt th{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:9px 13px;text-align:left}
+.vt td{padding:8px 13px;border-bottom:1px solid #F0ECE6;vertical-align:top;line-height:1.5}
+.vt tr:last-child td{border-bottom:none}.vt tr:hover td{background:var(--smoke)}
+.vt td:first-child{font-weight:600}.vt td:last-child{color:var(--mid);font-style:italic}
+.vt td .note{font-size:11.5px;font-style:normal;font-weight:600;margin-top:2px}
+.vt td .note.cr{color:var(--cr)}.vt td .note.tl{color:var(--tl)}
+tr.alt td{background:var(--smoke)}
+.vt.cr th{background:var(--cr);color:#fff}.vt.pl th{background:var(--pl);color:#fff}
+.vt.tl th{background:var(--tl);color:#fff}.vt.gd th{background:var(--gd);color:#fff}.vt.sl th{background:var(--sl);color:#fff}
+
+/* INFO BOX */
+.box{border-radius:8px;padding:15px 19px;margin:14px 0;font-size:14px;line-height:1.7;border:1px solid transparent}
+.box.tl{background:var(--tl-lt);border-color:rgba(13,92,107,.2)}.box.gd{background:var(--gd-lt);border-color:rgba(154,110,0,.22)}
+.box.pl{background:var(--pl-lt);border-color:rgba(74,25,66,.18)}.box.cr{background:var(--cr-lt);border-color:rgba(139,26,26,.18)}
+.box p{margin-bottom:6px}.box p:last-child{margin-bottom:0}
+.box strong{color:var(--tl-dk)}.box.gd strong{color:var(--gd)}.box.cr strong{color:var(--cr)}.box.pl strong{color:var(--pl)}
+.box .ex{font-style:italic;color:var(--sl);display:block;margin:3px 0 3px 16px}
+.box .why{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--tl);display:block;margin-top:2px}
+
+/* RULE BOX */
+.rule-box{background:var(--smoke);border-radius:8px;padding:18px 22px;margin:14px 0;border:1px solid var(--rule)}
+.ri{display:flex;gap:13px;margin-bottom:15px;align-items:flex-start}.ri:last-child{margin-bottom:0}
+.badge{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:3px;flex-shrink:0}
+.b-ind{background:var(--tl-lt);color:var(--tl-dk);border:1px solid rgba(13,92,107,.28)}
+.b-sub{background:var(--pl-lt);color:var(--pl);border:1px solid rgba(74,25,66,.28)}
+.ri-body{font-size:14px;line-height:1.7}
+.ri-body .ex{font-style:italic;color:var(--sl);display:block;margin:3px 0 3px 0}
+.ri-body .why{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--tl);display:inline-block;margin-left:8px}
+
+/* PARTICIPLE CARDS */
+.pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin:13px 0}
+.pc{border-radius:8px;border:1px solid var(--rule);overflow:hidden;text-align:center}
+.pc .inf{background:var(--cr);color:rgba(255,255,255,.82);font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:6px 8px}
+.pc .part{background:#fff;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--cr-dk);padding:9px 8px}
+
+/* HABER GRID */
+.haber-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:8px;overflow:hidden;border:1px solid var(--rule);font-size:13.5px;margin:12px 0}
+.hc{padding:9px 14px;background:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.hc:nth-child(4n+3),.hc:nth-child(4n+4){background:var(--smoke)}
+.hc .subj{color:var(--mid);font-size:13px;min-width:90px}
+.hc .form{font-weight:600;color:var(--cr);font-family:'JetBrains Mono',monospace}
+
+/* DISHES TABLE */
+.dishes-wrap{margin:14px 0}
+.dishes-label{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cr);margin-bottom:10px;padding-bottom:6px;border-bottom:1px dashed var(--cr-lt)}
+.dishes-grid{display:grid;grid-template-columns:repeat(6,1fr);border-radius:10px;overflow:hidden;border:2px solid var(--cr)}
+.dish-col{display:flex;flex-direction:column}
+.dish-letter{background:var(--cr);color:#fff;font-family:'Playfair Display',serif;font-size:24px;font-weight:900;text-align:center;padding:10px 4px 4px;line-height:1}
+.dish-verb{background:rgba(139,26,26,.09);color:var(--cr-dk);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;text-align:center;padding:4px 2px 8px;border-bottom:1px solid var(--cr-lt)}
+.dish-form{font-family:'JetBrains Mono',monospace;font-size:11.5px;text-align:center;padding:5px 4px;border-bottom:1px solid var(--rule);color:var(--sl)}
+.dish-form:last-child{border-bottom:none}
+.dish-col:nth-child(odd) .dish-form{background:var(--smoke)}
+.dish-col:nth-child(even) .dish-form{background:#fff}
+
+/* TRIGGER PILLS */
+.trigger-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:9px;margin:13px 0}
+.tpill{background:var(--pl-lt);border:1px solid rgba(74,25,66,.16);border-radius:8px;padding:9px 13px}
+.tpill .term{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--pl);font-size:12.5px;display:block;margin-bottom:3px}
+.tpill .ex{color:var(--mid);font-style:italic;font-size:13px}
+
+/* CONTRAST TABLE */
+.ct{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
+.ct th{padding:11px 15px;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.ct th.pret{background:var(--sl);color:#fff}.ct th.perf{background:var(--cr);color:#fff}
+.ct td{padding:9px 15px;border-bottom:1px solid var(--rule);text-align:center;font-style:italic;color:var(--mid)}
+.ct td.lbl{font-style:normal;color:var(--ink);font-weight:600;font-size:13px}
+.ct tr:last-child td{border-bottom:none}.ct tr:nth-child(even) td{background:var(--smoke)}
+
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tip{background:var(--smoke);border-radius:8px;padding:15px 17px;border:1px solid var(--rule);font-size:13.5px;line-height:1.65}
+.tip-icon{font-size:19px;display:block;margin-bottom:7px}
+.tip-head{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cr);margin-bottom:5px}
+.tip p{color:var(--mid)}.tip strong{color:var(--ink)}
+
+/* PLACEHOLDER */
+.placeholder{background:var(--gd-lt);border:2px dashed rgba(154,110,0,.35);border-radius:8px;padding:24px;text-align:center;color:var(--gd);font-family:'JetBrains Mono',monospace;font-size:13px;margin-top:18px}
+.placeholder .icon{font-size:26px;margin-bottom:10px;display:block}
+
+/* BACK TOP */
+.back-top{position:fixed;bottom:26px;right:26px;width:42px;height:42px;background:var(--cr);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:17px;box-shadow:0 4px 14px rgba(139,26,26,.35);transition:transform .2s,background .2s;z-index:300}
+.back-top:hover{background:var(--cr-dk);transform:translateY(-3px)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .sidebar{display:none}.main{margin-left:0}
+  .hero,.alert-bar,.content{padding-left:22px;padding-right:22px}
+  .tips-grid{grid-template-columns:1fr}
+  .dishes-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media print{
+  .sidebar,.back-top{display:none}.main{margin-left:0}
+  .card{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sb-brand">
+    <div class="kicker">SPAN 2102 · Spring 2026</div>
+    <div class="name">Guía de Estudio<br>Examen Parcial</div>
+    <div class="sub">Puntos de partida, Caps. 15 &amp; 16</div>
+  </div>
+
+  <div class="nav-group">Capítulo 15</div>
+  <ul class="nav-list">
+    <li><a href="#gram42"><span class="num">42</span>Participio Pasado</a></li>
+    <li><a href="#gram43"><span class="num">43</span>Presente Perfecto</a></li>
+    <li><a href="#vocab-ma"><span class="num">▸</span>Medio Ambiente</a></li>
+    <li><a href="#vocab-viv"><span class="num">▸</span>Vivienda</a></li>
+    <li><a href="#vocab-trans"><span class="num">▸</span>Transporte</a></li>
+  </ul>
+
+  <div class="nav-group">Capítulo 16</div>
+  <ul class="nav-list">
+    <li><a href="#gram44"><span class="num">44</span>Subjuntivo</a></li>
+    <li><a href="#vocab-rel"><span class="num">▸</span>Relaciones Personales</a></li>
+    <li><a href="#vocab-etapas"><span class="num">▸</span>Etapas de la Vida</a></li>
+    <li><a href="#vocab-lugares"><span class="num">▸</span>Lugares / Ceremonias</a></li>
+  </ul>
+
+  <div class="nav-group">Más</div>
+  <ul class="nav-list">
+    <li><a href="#cultura"><span class="num">★</span>Cultura</a></li>
+    <li><a href="#tips"><span class="num">✓</span>Estrategias</a></li>
+  </ul>
+
+  <div class="sb-footer">LSU · Dept. of World Languages</div>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="hero">
+  <div class="hero-kicker">LSU · SPAN 2102 · Spring 2026</div>
+  <h1>Guía de Estudio<br>Examen Parcial</h1>
+  <p class="hero-sub">Puntos de partida — Capítulos 15 &amp; 16</p>
+  <div class="chips">
+    <span class="chip gold">Gramáticas 42 · 43 · 44</span>
+    <span class="chip">Participio Pasado</span>
+    <span class="chip">Presente Perfecto</span>
+    <span class="chip">Subjuntivo · DISHES</span>
+    <span class="chip">Relaciones Personales</span>
+    <span class="chip">Cultura: Argentina &amp; Uruguay</span>
+  </div>
+</header>
+
+<div class="alert-bar">
+  <span>📋</span>
+  <div><strong>Formato del examen:</strong>
+    Secciones I–IV → <strong>SCANTRON</strong> (A / B / C / D) &nbsp;|&nbsp;
+    Sección V (Cultura) → responde <strong>por escrito</strong> en el papel del examen.
+    El verbo en rojo entre paréntesis indica qué forma conjugar.
+  </div>
+</div>
+
+<div class="content">
+
+<!-- ════════════════════════════════════════════
+     GRAMÁTICA 42 — PARTICIPIO PASADO
+═════════════════════════════════════════════ -->
+<div class="card" id="gram42">
+  <div class="card-head cr">
+    <div class="card-num">42</div>
+    <div class="card-title">
+      <div class="lbl">Gramática · Cap. 15</div>
+      <h2>El Participio Pasado</h2>
+    </div>
+    <span class="card-chap">Cap. 15</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title cr">Formación regular</div>
+      <table class="vt cr">
+        <thead><tr><th>Terminación</th><th>→ Participio</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr><td>-AR</td><td>→ <strong>-ado</strong></td><td>hablar→hablado, amar→amado, casarse→casado</td></tr>
+          <tr class="alt"><td>-ER</td><td>→ <strong>-ido</strong></td><td>conocer→conocido, nacer→nacido, comer→comido</td></tr>
+          <tr><td>-IR</td><td>→ <strong>-ido</strong></td><td>vivir→vivido, recibir→recibido, salir→salido</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title cr">⚠️ Participios irregulares — ¡Memoriza todos!</div>
+      <div class="box gd"><p>Estos verbos <strong>NO</strong> siguen el patrón regular. Son los más frecuentes en el examen.</p></div>
+      <div class="pc-grid">
+        <div class="pc"><div class="inf">abrir</div><div class="part">abierto</div></div>
+        <div class="pc"><div class="inf">decir</div><div class="part">dicho</div></div>
+        <div class="pc"><div class="inf">escribir</div><div class="part">escrito</div></div>
+        <div class="pc"><div class="inf">hacer</div><div class="part">hecho</div></div>
+        <div class="pc"><div class="inf">morir</div><div class="part">muerto</div></div>
+        <div class="pc"><div class="inf">poner</div><div class="part">puesto</div></div>
+        <div class="pc"><div class="inf">resolver</div><div class="part">resuelto</div></div>
+        <div class="pc"><div class="inf">romper</div><div class="part">roto</div></div>
+        <div class="pc"><div class="inf">ver</div><div class="part">visto</div></div>
+        <div class="pc"><div class="inf">volver</div><div class="part">vuelto</div></div>
+        <div class="pc"><div class="inf">descubrir</div><div class="part">descubierto</div></div>
+        <div class="pc"><div class="inf">devolver</div><div class="part">devuelto</div></div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title cr">Tres usos del participio pasado</div>
+      <div class="box tl">
+        <p><strong>1️⃣ Como adjetivo</strong> — concuerda en género y número con el sustantivo:</p>
+        <span class="ex">La puerta está <em>abierta</em>. &nbsp;|&nbsp; Los planes están <em>hechos</em>. &nbsp;|&nbsp; Las ventanas están <em>rotas</em>.</span>
+        <p style="margin-top:11px"><strong>2️⃣ Con ESTAR</strong> — para expresar un estado resultante:</p>
+        <span class="ex">El problema está <em>resuelto</em>. &nbsp;|&nbsp; La pareja está <em>divorciada</em>.</span>
+        <p style="margin-top:11px"><strong>3️⃣ En el presente perfecto</strong> con HABER — participio <strong>invariable</strong> (no concuerda):</p>
+        <span class="ex">He <em>comido</em>. &nbsp;|&nbsp; Hemos <em>visto</em>. &nbsp;|&nbsp; Se han <em>casado</em>. &nbsp;|&nbsp; ¿Has <em>vuelto</em>?</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     GRAMÁTICA 43 — PRESENTE PERFECTO
+═════════════════════════════════════════════ -->
+<div class="card" id="gram43">
+  <div class="card-head cr">
+    <div class="card-num">43</div>
+    <div class="card-title">
+      <div class="lbl">Gramática · Cap. 15</div>
+      <h2>El Presente Perfecto</h2>
+    </div>
+    <span class="card-chap">Cap. 15</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title cr">Formación: HABER (presente) + participio pasado invariable</div>
+      <div class="haber-grid">
+        <div class="hc"><span class="subj">yo</span><span class="form">he</span></div>
+        <div class="hc"><span class="subj">nosotros</span><span class="form">hemos</span></div>
+        <div class="hc"><span class="subj">tú</span><span class="form">has</span></div>
+        <div class="hc"><span class="subj">vosotros</span><span class="form">habéis</span></div>
+        <div class="hc"><span class="subj">él / ella / Ud.</span><span class="form">ha</span></div>
+        <div class="hc"><span class="subj">ellos / Uds.</span><span class="form">han</span></div>
+      </div>
+      <div class="box tl" style="margin-top:14px">
+        <p><strong>Ejemplos con vocabulario del capítulo:</strong></p>
+        <span class="ex">Mis amigos se han <em>casado</em> en la iglesia del barrio.</span>
+        <span class="ex">¿Has <em>conocido</em> a alguien especial este año?</span>
+        <span class="ex">La pareja recién casada ha <em>vuelto</em> de su luna de miel en Uruguay.</span>
+        <span class="ex">Nunca hemos <em>visto</em> una boda tan emotiva.</span>
+        <span class="ex">Todavía no me he <em>enamorado</em> de nadie en esta ciudad.</span>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title tl">Adverbios clave con el presente perfecto</div>
+      <table class="vt tl">
+        <thead><tr><th>Expresión</th><th>Inglés</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>ya</td><td>already</td><td>¿Ya te has casado?</td></tr>
+          <tr class="alt"><td>todavía no</td><td>not yet</td><td>Todavía no nos hemos divorciado.</td></tr>
+          <tr><td>alguna vez</td><td>ever</td><td>¿Has estado alguna vez enamorado/a?</td></tr>
+          <tr class="alt"><td>nunca</td><td>never</td><td>Nunca he roto con nadie por mensaje.</td></tr>
+          <tr><td>siempre</td><td>always</td><td>Siempre ha sido muy cariñoso/a.</td></tr>
+          <tr class="alt"><td>recientemente</td><td>recently</td><td>Recientemente han anunciado su noviazgo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title cr">Pretérito vs. Presente Perfecto</div>
+      <table class="ct">
+        <thead><tr><th class="pret">Pretérito indefinido</th><th class="perf">Presente perfecto</th></tr></thead>
+        <tbody>
+          <tr><td class="lbl">Tiempo específico y terminado</td><td class="lbl">Relevancia / conexión con el presente</td></tr>
+          <tr><td>Ayer me enamoré de ti.</td><td>Siempre me he enamorado rápido.</td></tr>
+          <tr><td>En 2020 se casaron.</td><td>Este año se han divorciado.</td></tr>
+          <tr><td>Conocí a mi novia en 2018.</td><td>Hemos vivido juntos dos años.</td></tr>
+          <tr><td>⚠️ <em>Ayer hemos comido pizza.</em> ✗</td><td>✅ Con <em>ayer</em> → siempre pretérito</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     GRAMÁTICA 44 — SUBJUNTIVO + DISHES
+═════════════════════════════════════════════ -->
+<div class="card" id="gram44">
+  <div class="card-head pl">
+    <div class="card-num">44</div>
+    <div class="card-title">
+      <div class="lbl">Gramática · Cap. 16</div>
+      <h2>El Subjuntivo con Antecedentes Indefinidos</h2>
+    </div>
+    <span class="card-chap">Cap. 16</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title pl">La regla fundamental</div>
+      <div class="rule-box">
+        <div class="ri">
+          <span class="badge b-ind">INDICATIVO</span>
+          <div class="ri-body">
+            El antecedente <strong>ES conocido / existe</strong> — persona o cosa específica y real.
+            <span class="ex">Busco a <u>la chica</u> que <strong>habla</strong> guaraní. <span class="why">→ Ya sé quién es</span></span>
+            <span class="ex">Tengo <u>un amigo</u> que <strong>conoce</strong> Buenos Aires. <span class="why">→ Amigo real y específico</span></span>
+          </div>
+        </div>
+        <div class="ri">
+          <span class="badge b-sub">SUBJUNTIVO</span>
+          <div class="ri-body">
+            El antecedente <strong>es indefinido / no existe / es hipotético</strong>.
+            <span class="ex">Busco <u>una pareja</u> que <strong>hable</strong> guaraní. <span class="why">→ No sé si existe</span></span>
+            <span class="ex">No hay <u>nadie</u> que <strong>sepa</strong> bailar tango aquí. <span class="why">→ nadie = inexistente</span></span>
+            <span class="ex">¿Hay <u>alguien</u> que <strong>pueda</strong> recomendarme un barrio? <span class="why">→ indefinido</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title pl">Palabras gatillo frecuentes</div>
+      <div class="trigger-grid">
+        <div class="tpill"><span class="term">alguien que…</span><span class="ex">¿Hay alguien que sepa la respuesta?</span></div>
+        <div class="tpill"><span class="term">nadie que…</span><span class="ex">No hay nadie que quiera ir.</span></div>
+        <div class="tpill"><span class="term">algo que…</span><span class="ex">Busco algo que sea sostenible.</span></div>
+        <div class="tpill"><span class="term">algún/alguna… que…</span><span class="ex">Quiero un barrio que tenga buena vida nocturna.</span></div>
+        <div class="tpill"><span class="term">ningún/ninguna… que…</span><span class="ex">No conozco ninguna pareja que no discuta.</span></div>
+        <div class="tpill"><span class="term">una persona que…</span><span class="ex">Busco una persona que sea honesta y cariñosa.</span></div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title pl">🍽️ Irregulares del subjuntivo — mnemónico DISHES</div>
+      <div class="dishes-wrap">
+        <div class="dishes-label">D · I · S · H · E · S — los 6 completamente irregulares</div>
+        <div class="dishes-grid">
+          <div class="dish-col">
+            <div class="dish-letter">D</div><div class="dish-verb">dar</div>
+            <div class="dish-form">dé</div><div class="dish-form">des</div><div class="dish-form">dé</div>
+            <div class="dish-form">demos</div><div class="dish-form">deis</div><div class="dish-form">den</div>
+          </div>
+          <div class="dish-col">
+            <div class="dish-letter">I</div><div class="dish-verb">ir</div>
+            <div class="dish-form">vaya</div><div class="dish-form">vayas</div><div class="dish-form">vaya</div>
+            <div class="dish-form">vayamos</div><div class="dish-form">vayáis</div><div class="dish-form">vayan</div>
+          </div>
+          <div class="dish-col">
+            <div class="dish-letter">S</div><div class="dish-verb">ser</div>
+            <div class="dish-form">sea</div><div class="dish-form">seas</div><div class="dish-form">sea</div>
+            <div class="dish-form">seamos</div><div class="dish-form">seáis</div><div class="dish-form">sean</div>
+          </div>
+          <div class="dish-col">
+            <div class="dish-letter">H</div><div class="dish-verb">haber</div>
+            <div class="dish-form">haya</div><div class="dish-form">hayas</div><div class="dish-form">haya</div>
+            <div class="dish-form">hayamos</div><div class="dish-form">hayáis</div><div class="dish-form">hayan</div>
+          </div>
+          <div class="dish-col">
+            <div class="dish-letter">E</div><div class="dish-verb">estar</div>
+            <div class="dish-form">esté</div><div class="dish-form">estés</div><div class="dish-form">esté</div>
+            <div class="dish-form">estemos</div><div class="dish-form">estéis</div><div class="dish-form">estén</div>
+          </div>
+          <div class="dish-col">
+            <div class="dish-letter">S</div><div class="dish-verb">saber</div>
+            <div class="dish-form">sepa</div><div class="dish-form">sepas</div><div class="dish-form">sepa</div>
+            <div class="dish-form">sepamos</div><div class="dish-form">sepáis</div><div class="dish-form">sepan</div>
+          </div>
+        </div>
+      </div>
+      <div class="box pl" style="margin-top:14px">
+        <p><strong>Otros irregulares frecuentes</strong> — se forman desde el <em>yo</em> del presente indicativo (quita la -o, añade terminación contraria):</p>
+        <span class="ex">hacer→<em>haga</em> &nbsp;|&nbsp; tener→<em>tenga</em> &nbsp;|&nbsp; poder→<em>pueda</em> &nbsp;|&nbsp; poner→<em>ponga</em> &nbsp;|&nbsp; venir→<em>venga</em> &nbsp;|&nbsp; salir→<em>salga</em></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     VOCABULARIO CAP. 15
+═════════════════════════════════════════════ -->
+<div class="card" id="vocab-ma">
+  <div class="card-head tl">
+    <div class="card-num">▸</div>
+    <div class="card-title">
+      <div class="lbl">Vocabulario · Cap. 15</div>
+      <h2>Medio Ambiente, Vivienda y Transporte</h2>
+    </div>
+    <span class="card-chap">Cap. 15</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title tl">El medio ambiente / The Environment</div>
+      <table class="vt tl">
+        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td>el medio ambiente</td><td>environment</td></tr>
+          <tr class="alt"><td>el cambio climático</td><td>climate change</td></tr>
+          <tr><td>la contaminación</td><td>pollution</td></tr>
+          <tr class="alt"><td>los recursos naturales</td><td>natural resources</td></tr>
+          <tr><td>la deforestación</td><td>deforestation</td></tr>
+          <tr class="alt"><td>el reciclaje</td><td>recycling</td></tr>
+          <tr><td>la energía renovable</td><td>renewable energy</td></tr>
+          <tr class="alt"><td>el calentamiento global</td><td>global warming</td></tr>
+          <tr><td>la biodiversidad</td><td>biodiversity</td></tr>
+          <tr class="alt"><td>proteger / conservar</td><td>to protect / to conserve</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub" id="vocab-viv">
+      <div class="sub-title tl">La vivienda / Housing</div>
+      <table class="vt tl">
+        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td>el apartamento / el piso</td><td>apartment / flat</td></tr>
+          <tr class="alt"><td>el alquiler</td><td>rent</td></tr>
+          <tr><td>el/la propietario/a</td><td>landlord / landlady</td></tr>
+          <tr class="alt"><td>el/la inquilino/a</td><td>tenant</td></tr>
+          <tr><td>mudarse</td><td>to move (residence)</td></tr>
+          <tr class="alt"><td>el barrio</td><td>neighborhood</td></tr>
+          <tr><td>amueblado/a</td><td>furnished</td></tr>
+          <tr class="alt"><td>el contrato de arrendamiento</td><td>lease agreement</td></tr>
+          <tr><td>las comodidades</td><td>amenities</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub" id="vocab-trans">
+      <div class="sub-title tl">El transporte / Transportation</div>
+      <table class="vt tl">
+        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td>el transporte público</td><td>public transportation</td></tr>
+          <tr class="alt"><td>el autobús / el metro</td><td>bus / subway</td></tr>
+          <tr><td>conducir / manejar</td><td>to drive</td></tr>
+          <tr class="alt"><td>la emisión de gases</td><td>gas emissions</td></tr>
+          <tr><td>el combustible</td><td>fuel</td></tr>
+          <tr class="alt"><td>el transporte sostenible</td><td>sustainable transport</td></tr>
+          <tr><td>el tráfico</td><td>traffic</td></tr>
+          <tr class="alt"><td>el peaje</td><td>toll</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     VOCABULARIO CAP. 16
+═════════════════════════════════════════════ -->
+<div class="card" id="vocab-rel">
+  <div class="card-head tl">
+    <div class="card-num">▸</div>
+    <div class="card-title">
+      <div class="lbl">Vocabulario · Cap. 16</div>
+      <h2>Las Relaciones Personales y los Estados Civiles</h2>
+    </div>
+    <span class="card-chap">Cap. 16</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title tl">Verbos — relaciones sentimentales</div>
+      <table class="vt tl">
+        <thead><tr><th>Verbo</th><th>Traducción</th></tr></thead>
+        <tbody>
+          <tr><td>amar</td><td>to love</td></tr>
+          <tr class="alt"><td>casarse (con)</td><td>to marry, to get married (to)</td></tr>
+          <tr><td>conocerse (conozco)</td><td>to meet, to get to know each other</td></tr>
+          <tr class="alt"><td>enamorarse (de)</td><td>to fall in love (with)</td></tr>
+          <tr><td>llevarse bien / mal (con)</td><td>to get along well / poorly (with)</td></tr>
+          <tr class="alt"><td>querer (ie)</td><td>to love, to want</td></tr>
+          <tr><td>romper (con)</td><td>to break up (with)</td></tr>
+          <tr class="alt"><td>divorciarse (de)</td><td>to get divorced (from)</td></tr>
+          <tr><td>separarse (de)</td><td>to separate (from)</td></tr>
+          <tr class="alt"><td>pelear(se) (con)</td><td>to fight, to quarrel (with)</td></tr>
+          <tr><td>salir (con)</td><td>to go out (with), to date</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title tl">Sustantivos — relaciones y ceremonias</div>
+      <table class="vt tl">
+        <thead><tr><th>Sustantivo</th><th>Traducción</th></tr></thead>
+        <tbody>
+          <tr><td>la amistad</td><td>friendship</td></tr>
+          <tr class="alt"><td>el amor</td><td>love</td></tr>
+          <tr><td>la boda</td><td>wedding (ceremony)</td></tr>
+          <tr class="alt"><td>el cariño</td><td>affection, fondness</td></tr>
+          <tr><td>la luna de miel</td><td>honeymoon</td></tr>
+          <tr class="alt"><td>el matrimonio</td><td>marriage; married couple</td></tr>
+          <tr><td>la novia / el novio</td><td>fiancée/fiancé; bride/groom; girlfriend/boyfriend</td></tr>
+          <tr class="alt"><td>el noviazgo</td><td>engagement period; courtship</td></tr>
+          <tr><td>el/la viudo/a</td><td>widower / widow</td></tr>
+          <tr class="alt"><td>el divorcio / la separación</td><td>divorce / separation</td></tr>
+          <tr><td>la pareja</td><td>partner; couple</td></tr>
+          <tr class="alt"><td>el/la esposo/a</td><td>husband / wife (spouse)</td></tr>
+          <tr><td>la cita</td><td>date; appointment</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title gd">⚠️ Adjetivos con ESTAR — estados civiles</div>
+      <div class="box gd"><p>Estos adjetivos se usan con <strong>ESTAR</strong> — describen un <em>estado</em>, no un rasgo permanente de carácter.</p></div>
+      <table class="vt gd" style="margin-top:11px">
+        <thead><tr><th>Expresión</th><th>Traducción / Nota</th></tr></thead>
+        <tbody>
+          <tr><td>estar casado/a (con)</td><td>to be married (to)</td></tr>
+          <tr class="alt"><td>estar divorciado/a (de)</td><td>to be divorced (from)</td></tr>
+          <tr><td>estar enamorado/a (de)</td><td>to be in love (with)</td></tr>
+          <tr class="alt"><td>estar recién casado/a</td><td>to be a newlywed</td></tr>
+          <tr><td>estar separado/a (de)</td><td>to be separated (from)</td></tr>
+          <tr class="alt"><td>estar soltero/a</td><td>to be single</td></tr>
+          <tr><td>estar comprometido/a</td><td>to be engaged</td></tr>
+          <tr class="alt"><td>ser romántico/a</td><td>to be romantic <div class="note cr">→ con SER (rasgo permanente de carácter)</div></td></tr>
+          <tr><td>ser cariñoso/a</td><td>to be affectionate <div class="note cr">→ con SER (rasgo permanente)</div></td></tr>
+          <tr class="alt"><td>ser feliz (pl. felices)</td><td>to be happy <div class="note cr">→ con SER (rasgo permanente)</div></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub" id="vocab-etapas">
+      <div class="sub-title tl">Las etapas de la vida</div>
+      <table class="vt tl">
+        <thead><tr><th>Español</th><th>English</th></tr></thead>
+        <tbody>
+          <tr><td>la infancia / la niñez</td><td>infancy; childhood</td></tr>
+          <tr class="alt"><td>la adolescencia</td><td>adolescence</td></tr>
+          <tr><td>la juventud</td><td>youth</td></tr>
+          <tr class="alt"><td>la madurez</td><td>middle age; maturity</td></tr>
+          <tr><td>la vejez</td><td>old age</td></tr>
+          <tr class="alt"><td>la muerte</td><td>death</td></tr>
+          <tr><td>la vida / la etapa</td><td>life / stage</td></tr>
+          <tr class="alt"><td>nacer (nazco)</td><td>to be born</td></tr>
+          <tr><td>crecer (crezco)</td><td>to grow (up)</td></tr>
+          <tr class="alt"><td>morir (muero) (u)</td><td>to die</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub" id="vocab-lugares">
+      <div class="sub-title tl">Lugares para ceremonias</div>
+      <table class="vt tl">
+        <thead><tr><th>Lugar</th><th>Traducción</th></tr></thead>
+        <tbody>
+          <tr><td>la iglesia</td><td>church</td></tr>
+          <tr class="alt"><td>la mezquita</td><td>mosque</td></tr>
+          <tr><td>el templo</td><td>temple</td></tr>
+          <tr class="alt"><td>el juzgado</td><td>courthouse (civil ceremony)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CULTURA
+═════════════════════════════════════════════ -->
+<div class="card" id="cultura">
+  <div class="card-head dk">
+    <div class="card-num">★</div>
+    <div class="card-title">
+      <div class="lbl">Cultura · Cap. 15</div>
+      <h2>La Argentina y el Uruguay</h2>
+    </div>
+    <span class="card-chap">Cap. 15</span>
+  </div>
+  <div class="card-body">
+
+    <div class="sub">
+      <div class="sub-title tl">Datos esenciales</div>
+      <table class="vt tl">
+        <thead><tr><th>Dato</th><th>Descripción</th></tr></thead>
+        <tbody>
+          <tr><td>Capital de Argentina</td><td>Buenos Aires</td></tr>
+          <tr class="alt"><td>Capital de Uruguay</td><td>Montevideo</td></tr>
+          <tr><td>Idioma / particularidad</td><td>Español con <em>voseo</em> — se usa <em>vos</em> en lugar de <em>tú</em></td></tr>
+          <tr class="alt"><td>Cataratas del Iguazú</td><td>Frontera Argentina-Brasil; Patrimonio Natural UNESCO</td></tr>
+          <tr><td>La Pampa</td><td>Llanura fértil; base de ganadería y agricultura</td></tr>
+          <tr class="alt"><td>El tango</td><td>Baile y música de Buenos Aires y Montevideo (Patrimonio UNESCO)</td></tr>
+          <tr><td>La Patagonia</td><td>Gran biodiversidad en el sur de Argentina; destino ecoturístico</td></tr>
+          <tr class="alt"><td>Cabo de Hornos</td><td>Extremo sur del continente americano</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub">
+      <div class="sub-title gd">📌 Contenido adicional de cultura</div>
+      <div class="placeholder">
+        <span class="icon">✏️</span>
+        <p><strong>Este espacio está reservado para contenido adicional.</strong></p>
+        <p>Pega aquí personajes históricos, lecturas del Cap. 15,</p>
+        <p>preguntas de práctica, o cualquier otro material de cultura.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     ESTRATEGIAS
+═════════════════════════════════════════════ -->
+<div class="card" id="tips">
+  <div class="card-head sl">
+    <div class="card-num">✓</div>
+    <div class="card-title">
+      <div class="lbl">Para el examen</div>
+      <h2>Estrategias y Recordatorios</h2>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="tips-grid">
+      <div class="tip">
+        <span class="tip-icon">📝</span>
+        <div class="tip-head">Participio Pasado · Cap. 15</div>
+        <p>¿Regular <strong>(-ado / -ido)</strong> o irregular? Memoriza los 12 irregulares. Como adjetivo <strong>sí concuerda</strong>; en el presente perfecto es <strong>invariable</strong>.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">⏱️</span>
+        <div class="tip-head">Presente Perfecto · Cap. 15</div>
+        <p>HABER + participio invariable. Con <strong>ayer</strong> → siempre pretérito. Palabras clave: <strong>ya, todavía no, alguna vez, nunca, recientemente</strong>.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">🍽️</span>
+        <div class="tip-head">DISHES · Cap. 16</div>
+        <p><strong>D</strong>ar · <strong>I</strong>r · <strong>S</strong>er · <strong>H</strong>aber · <strong>E</strong>star · <strong>S</strong>aber — los 6 completamente irregulares del subjuntivo. Todos los demás: yo del indicativo → quita la -o → añade terminación contraria.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">🔀</span>
+        <div class="tip-head">Indicativo vs. Subjuntivo · Cap. 16</div>
+        <p>¿El antecedente es <strong>conocido y específico</strong>? → indicativo. ¿<strong>Indefinido / hipotético / inexistente</strong>? → subjuntivo. Lee toda la oración antes de decidir.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">💬</span>
+        <div class="tip-head">Vocabulario · Cap. 16</div>
+        <p>Aprende los <strong>verbos reflexivos</strong> (casarse, enamorarse, llevarse) y los <strong>adjetivos con ESTAR</strong> (casado/a, soltero/a, enamorado/a, recién casado/a). <em>Ser</em> = rasgo; <em>estar</em> = estado.</p>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">📄</span>
+        <div class="tip-head">Scantron</div>
+        <p>Elimina las opciones incorrectas primero. La Sección V (Cultura) va en el <strong>papel</strong>, no en el scantron. No dejes espacios en blanco.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /content -->
+</main>
+
+<a href="#" class="back-top" title="Volver arriba">↑</a>
+
+<script>
+const links = document.querySelectorAll('.nav-list a');
+const sections = document.querySelectorAll('[id]');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`.nav-list a[href="#${e.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { threshold: 0.25, rootMargin: '-50px 0px -55% 0px' });
+sections.forEach(s => obs.observe(s));
+document.querySelector('.back-top').addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
